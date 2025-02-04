@@ -4,18 +4,18 @@
   "description": "## 1. Demo And Installation",
   "main": "index.js",
   "scripts": {
-    "start":"cd backend && npm start",
-    "prebuild":"cd backend && npm install & cd frontend && npm install",
+    "start": "cd backend && npm start",
+    "prebuild": "cd backend && npm install & cd frontend && npm install",
     "build": "cd frontend && npm run build",
     "postbuild": "mv -f frontend/build backend/src/public"
-
-
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines":{
-    "node":">=18 <19"
+  "engines": {
+    "node": ">=18 <19"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
