@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="container">
         <div className="text-content">
           <h1 className="title">
-          Share and Support
+          Share 
            <br/>
            <span>Connecting Hearts Through Meals</span>
           </h1>
