@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node"
+  },
+  "include": ["src", "src/components/MobileNav/.js"]
+}

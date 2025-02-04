@@ -1,0 +1,9 @@
+.homeContainer{
+    margin-right: 0;
+    /* border: 2px solid green; */
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

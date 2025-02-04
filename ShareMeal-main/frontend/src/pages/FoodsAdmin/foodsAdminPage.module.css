@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  /* border: 2px solid red; */
+  color:white;
+}
+
+.list {
+  /* border: 2px solid green; */
+  margin: 1rem;
+  max-width: 100%;
+  color:white;
+}
+.list h1{
+  /* border: 2px solid red; */
+  text-align: center;
+  color:white;
+}
+
+
+
+a.add_food {
+ 
+  display: inline-block;
+  background: darkred;
+  color: white;
+  padding: 0.7rem;
+  margin: 0.8rem 0;
+  border-radius: 1.5rem;
+}
+
+a.add_food:hover {
+  opacity: 0.9;
+}
+
+.list_item {
+  color:white;
+  display: grid;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  border: 2px solid red;
+  grid-template-columns:
+    minmax(5rem, 2rem)
+    minmax(10rem, 15rem)
+    minmax(5rem, 5rem)
+    minmax(0.5rem, 5rem);
+  font-size: 1.2rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(150, 149, 149, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(237, 236, 236, 0.299) 0px 8px 16px 0px;
+     border: 0.0001rem solid #53525277;
+}
+
+.list_item img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+.list_item>a{
+  color:white;
+}
+
+.actions > a {
+  color: white;
+  cursor: pointer;
+  
+}
+.actions{
+  color:white;
+  display: flex;
+  /* border: 2px solid red; */
+  margin-right: -1.5rem;
+  justify-content: space-between;
+}
+
+@media(max-width: 480px){
+  .list{
+    max-width: 95%;
+  }
+  .list_item img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100rem;
+    object-fit: cover;
+  }
+  .list_item{
+    color:white;
+    grid-template-columns:
+    minmax(2rem, 2rem)
+    minmax(8rem, 15rem)
+    minmax(3rem, 5rem)
+    minmax(0.1rem, 5rem);
+  }
+  
+  .actions > a {
+    
+    margin-right: 1rem;
+    /* border: 2px solid green; */
+    
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 0.9rem;
+    
+  }
+  .actions{
+    /* margin-right: 1rem; */
+    margin-left: 0.8rem;
+  }
+  .list_item > a{
+    font-size: 0.9rem;
+    margin-left: 2rem;
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+}

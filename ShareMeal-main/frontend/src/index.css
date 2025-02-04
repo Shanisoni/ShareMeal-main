@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: whitesmoke; */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* body-font */
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #000319;
+  margin: 0;
+  padding: 0;
+  /* background-image: url(./images/bg.jpg); */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* body-font */
+}
+
+a {
+  text-decoration: none;
+}

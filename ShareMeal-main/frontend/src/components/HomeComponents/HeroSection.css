@@ -1,0 +1,225 @@
+/* Styles for the hero section */
+:root {
+  --primary-color: rgba(231, 231, 231, 0.92); 
+  /* --secondary-color: #2ecc71; 
+  --tertiary-color: #e74c3c;  */
+}
+.hero-section {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    /* height: 100vh;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid red; */
+    color: var(--primary-color);
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* body-font */
+    width: 100vw;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  h1 span{
+    /* border: 2px solid red; */
+    font-size: 2.2rem;
+  }
+ 
+  
+  
+  .container {
+    /* border: 3px solid blue; */
+    color: var(--primary-color);;
+    width: 100%;
+    /* margin: 0 auto; */
+    padding: 24px 5%;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      padding: 24px 5%;
+    }
+  }
+  
+  /* Styles for text content */
+  .text-content {
+    /* border: 3px solid green; */
+    flex: 1;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .text-content {
+      font-size: 0.8rem;
+      text-align: left;
+      margin-bottom: 0;
+      padding-right: 16px;
+    }
+  }
+  @media (max-width: 768px) {
+    .text-content {
+      font-size: 0.8rem;
+      text-align: center;
+      margin-bottom: 0;
+      padding-right: 16px;
+      
+    }
+    .container{
+      margin-top: 5rem;
+    }
+  }
+
+  
+  .title {
+    
+    line-height: 2.2rem;
+    /* border: 2px solid green; */
+    margin-top: -2rem;
+    font-size: 2rem; /* text-3xl */
+    margin-bottom: rem; /* mb-4 */
+    font-weight: 525; /* font-medium */
+     /* text-gray-900 */
+  }
+  
+  @media (max-width: 447px) {
+    .title {
+      font-size: 1.5rem; /* sm:text-4xl */
+    }
+    h1 span{
+      font-size: 1.5rem;
+    }
+    
+  }
+  @media (min-width: 640px) {
+    .title {
+      font-size: 2rem; /* sm:text-4xl */
+    }
+    h1 span{
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width:768px) {
+    .title {
+      font-size: 2.5rem; /* sm:text-4xl */
+    }
+    h1 span{
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width:1438px) {
+    .title {
+      font-size: 3rem; /* sm:text-4xl */
+    }
+    h1 span{
+      font-size: 1.5rem;
+      line-height: 1px;
+    }
+  }
+  
+  
+  /* .hidden-on-small-screen {
+    display: none;
+  } */
+  
+  @media (min-width: 1024px) {
+    .hidden-on-small-screen {
+      display: block;
+    }
+  }
+  
+  .description {
+    font-size: 17px;
+    margin-top: 1rem;
+    margin-bottom: 2rem; /* mb-8 */
+    line-height: 1.625; /* leading-relaxed */
+  }
+  
+  /* Button styles */
+  .button-group {
+    display: flex;
+   
+  }
+  @media (max-width:768px){
+    .button-group{
+      justify-content: center;
+    }
+  }
+  .btn {
+    display: inline-flex;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1.125rem; /* text-lg */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;  
+  }
+  
+  .btn:hover{
+    transform: scale(1.1);
+  }
+  
+  .primary-btn {
+    background-color: #4f46e5; /* bg-indigo-500 */
+    color: var(--primary-color);; /* text-white */
+  }
+  
+  .primary-btn:hover {
+    background-color: #4338ca; /* hover:bg-indigo-600 */
+  }
+  
+  .secondary-btn {
+    background-color: #fdb62a; /* bg-gray-100 */
+    color: var(--primary-color); /* text-gray-700 */
+    margin-left: 1rem; /* ml-4 */
+  }
+  
+  .secondary-btn:hover {
+    background-color: #f8af1f; /* hover:bg-gray-200 */
+  }
+  
+  /* Styles for the image container */
+  .image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-image {
+    transition: transform 0.3s ease-in-out;
+    
+    height: auto;
+    border-radius: 0.375rem; /* rounded */
+    object-fit: cover;
+
+
+
+    --f: .03; /* the parallax factor (the smaller the better) */
+  --r: 10px; /* radius */
+  
+  --_f: calc(100%*var(--f)/(1 + var(--f)));
+  --_a: calc(40deg*var(--f));
+  max-width: 80%; /* the image size */
+  aspect-ratio: calc(1 + var(--f));
+  object-fit: cover;
+  clip-path: inset(0 var(--_f) 0 0 round var(--r));
+  transform: perspective(400px) var(--_t,rotateY(var(--_a)));
+  transition: .6s;
+  cursor: pointer;
+  }
+.hero-image:hover{
+ 
+
+  clip-path: inset(0 0 0 var(--_f) round var(--r));
+  --_t: translateX(calc(-1*var(--_f))) rotateY(calc(-1*var(--_a)))
+}
+
+  
+  

@@ -1,0 +1,157 @@
+.team-section {
+  padding-top: 4rem;
+  
+  background-color: #000319;
+  color: whitesmoke;
+  font-family: sans-serif;
+  /* border: 3px solid red; */
+  margin:0;
+  padding: 24px 5%;
+  
+}
+
+.container2 {
+  margin-top: 0;
+  max-width: 1500px;
+  padding: 24px 16px;
+  margin-bottom: 6rem;
+  
+}
+
+.text-center2 {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.title2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem; /* Default font size */
+  font-weight: 500;
+  color: white;
+}
+
+.description2 {
+  width: 66.666667%;
+  color: #bec1dd;
+  margin: auto;
+  line-height: 1.5;
+  font-size: 1rem; /* Default font size */
+}
+
+/* Team grid setup */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Team member card */
+.team-member {
+  box-shadow: rgba(150, 149, 149, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(237, 236, 236, 0.299) 0px 8px 16px 0px;
+  border: 0.0001rem solid #53525277;
+  /* border: 2px solid grey; */
+  display: flex;
+  /* transform: scale(1.05); */
+  border-radius: 8px;
+  width: calc(33.3333% - 16px); /* Adjusted to include gap */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+
+  transition: transform 0.3s ease-in-out;
+}
+.team-member:hover{
+  transform: scale(1.05);
+   
+}
+
+/* Member info */
+.member-info {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* Member image */
+.member-img {
+  width: 64px;
+  height: 64px;
+  background-color: #f7fafc;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+/* Member details */
+.member-details {
+  color: white;
+  flex-grow: 1;
+}
+
+.member-name {
+  
+  font-weight: 500;
+  font-size: 1rem; /* Default font size */
+}
+
+.member-role {
+  color: #bec1dd;
+  
+  font-size: 0.875rem; /* Default font size */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .description2 {
+      width: 80%; /* Adjust width for medium screens */
+  }
+  .team-member {
+    width: calc(50% - 16px); /* Adjust for 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .description2 {
+      width: 90%; /* Adjust width for smaller screens */
+  }
+  .team-member {
+    width: calc(50% - 16px); /* Adjust for 2 cards per row */
+  }
+}
+
+@media (max-width: 571px) {
+  .title2 {
+      font-size: 1.5rem; /* Reduce font size on very small screens */
+  }
+
+  .description2 {
+      font-size: 0.875rem; /* Adjust font size for readability */
+  }
+
+  .team-member {
+    width: 45%; /* Full width for each card */
+    justify-content: center;
+    
+  }
+
+  .member-name {
+    font-size: 0.75rem; /* Adjust font size */
+  }
+
+  .member-role {
+    font-size: 0.75rem; /* Adjust font size */
+  }
+  .member-info{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .member-img{
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,34 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  margin-top: 2rem;
+ 
+}
+
+.details {
+  width: 28rem;
+  margin: 1rem;
+  /* border: 2px solid white; */
+}
+
+.details form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register {
+  color:white;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.register > a{
+  color:white;
+}
