@@ -39,16 +39,7 @@ export default function Map({ readonly, location, onChange }) {
 
 function FindButtonAndMarker({ readonly, location, onChange }) {
   const [position, setPosition] = useState(location);
-
-  useEffect(() => {
-    if (readonly) {
-      map.setView(position, 13);
-      return;
-    }
-    if (position) onChange(position);
-  }, [position, map, onChange, readonly]);  // Add map, onChange, readonly to the dependency array
   
-
   const map = useMapEvents({
     click(e) {
       !readonly && setPosition(e.latlng);
@@ -61,6 +52,17 @@ function FindButtonAndMarker({ readonly, location, onChange }) {
       toast.error(e.message);
     },
   });
+  
+  useEffect(() => {
+    if (readonly) {
+      map.setView(position, 13);
+      return;
+    }
+    if (position) onChange(position);
+  }, [position, map, onChange, readonly]);  // Add map, onChange, readonly to the dependency array
+  
+
+  
 
   const markerIcon = new L.Icon({
     iconUrl: '/marker-icon-2x.png',

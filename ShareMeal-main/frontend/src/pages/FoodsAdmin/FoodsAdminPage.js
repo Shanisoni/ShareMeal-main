@@ -3,9 +3,9 @@ import classes from './foodsAdminPage.module.css';
 import { Link, useParams } from 'react-router-dom';
 import { deleteById, getAll, search } from '../../services/foodService';
 import NotFound from '../../components/NotFound/NotFound';
-import Title from '../../components/Title/Title';
+// import Title from '../../components/Title/Title';
 import Search from '../../components/Search/Search';
-import Price from '../../components/Price/Price';
+// import Price from '../../components/Price/Price';
 import { toast } from 'react-toastify';
 
 export default function FoodsAdminPage() {
@@ -14,7 +14,7 @@ export default function FoodsAdminPage() {
 
   useEffect(() => {
     loadFoods();
-  }, [searchTerm]);
+  }, [ loadFoods , searchTerm]);
 
   const loadFoods = async () => {
     const foods = searchTerm ? await search(searchTerm) : await getAll();

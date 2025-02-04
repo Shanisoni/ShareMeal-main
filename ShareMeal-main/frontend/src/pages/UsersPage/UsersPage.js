@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { getAll, toggleBlock } from '../../services/userService';
@@ -11,20 +11,23 @@ export default function UsersPage() {
   const { searchTerm } = useParams();
   const auth = useAuth();
 
-  useEffect(() => {
-    loadUsers();
-  }, [searchTerm , loadUsers]);
-
-  const loadUsers = async () => {
+  // Move loadUsers above useEffect and use useCallback to prevent re-creation
+  const loadUsers = useCallback(async () => {
     const users = await getAll(searchTerm);
     setUsers(users);
-  };
+  }, [searchTerm]); // Ensures it updates when searchTerm changes
 
-  const handleToggleBlock = async userId => {
+  useEffect(() => {
+    loadUsers();
+  }, [loadUsers]); // Now uses useCallback to avoid unnecessary re-renders
+
+  const handleToggleBlock = async (userId) => {
     const isBlocked = await toggleBlock(userId);
 
-    setUsers(oldUsers =>
-      oldUsers.map(user => (user.id === userId ? { ...user, isBlocked } : user))
+    setUsers((oldUsers) =>
+      oldUsers.map((user) =>
+        user.id === userId ? { ...user, isBlocked } : user
+      )
     );
   };
 
@@ -46,7 +49,7 @@ export default function UsersPage() {
           <h3>Actions</h3>
         </div>
         {users &&
-          users.map(user => (
+          users.map((user) => (
             <div key={user.id} className={classes.list_item}>
               <span>{user.name}</span>
               <span>{user.email}</span>

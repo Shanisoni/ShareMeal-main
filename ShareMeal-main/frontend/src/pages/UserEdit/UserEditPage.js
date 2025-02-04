@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
-import { getById, register, updateUser } from '../../services/userService';
+import { getById, updateUser } from '../../services/userService';
 import { useParams } from 'react-router-dom';
 import classes from './userEdit.module.css';
 import Title from '../../components/Title/Title';
@@ -19,14 +19,15 @@ export default function UserEditPage() {
   const { userId } = useParams();
   const isEditMode = userId;
 
-  useEffect(() => {
-    if (isEditMode) loadUser();
-  }, [userId , isEditMode, loadUser]);
-
-  const loadUser = async () => {
+  // ✅ Wrapped `loadUser` inside `useCallback()` to prevent re-renders
+  const loadUser = useCallback(async () => {
     const user = await getById(userId);
     reset(user);
-  };
+  }, [userId, reset]); // Added `reset` to dependency array to ensure stability
+
+  useEffect(() => {
+    if (isEditMode) loadUser();
+  }, [isEditMode, loadUser]); // ✅ Only runs when `isEditMode` or `loadUser` changes
 
   const submit = userData => {
     updateUser(userData);
@@ -52,7 +53,6 @@ export default function UserEditPage() {
             {...register('address', { required: true, minLength: 5 })}
             error={errors.address}
           />
-
           <Input label="Is Admin" type="checkbox" {...register('isAdmin')} />
           <Button type="submit" />
         </form>

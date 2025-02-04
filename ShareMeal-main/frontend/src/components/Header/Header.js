@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../../hooks/useCart";
+// import { useCart } from "../../hooks/useCart";
 import { useAuth } from "../../hooks/useAuth";
 import classes from "./header.module.css";
 import DropdownMenu from "../DropDownMenu/DropdownMenu";
