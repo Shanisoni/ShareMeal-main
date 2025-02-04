@@ -17,7 +17,7 @@ export default function OrderTrackPage() {
       trackOrderById(orderId).then(order => {
         setOrder(order);
       });
-  }, []);
+  }, [orderId]);
 
   if (!orderId)
     return <NotFound message="Order Not Found" linkText="Go To Home Page" />;

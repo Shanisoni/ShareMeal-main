@@ -46,7 +46,8 @@ function FindButtonAndMarker({ readonly, location, onChange }) {
       return;
     }
     if (position) onChange(position);
-  }, [position]);
+  }, [position, map, onChange, readonly]);  // Add map, onChange, readonly to the dependency array
+  
 
   const map = useMapEvents({
     click(e) {

@@ -10,8 +10,10 @@ function App() {
   const { showLoading, hideLoading } = useLoading();
 
   useEffect(() => {
-    setLoadingInterceptor({ showLoading, hideLoading });
-  }, []);
+    showLoading();
+    hideLoading();
+  }, [showLoading, hideLoading]);
+  
 
   return (
     <div className='appContainer'>

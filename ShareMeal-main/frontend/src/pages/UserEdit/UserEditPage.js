@@ -21,7 +21,7 @@ export default function UserEditPage() {
 
   useEffect(() => {
     if (isEditMode) loadUser();
-  }, [userId]);
+  }, [userId , isEditMode, loadUser]);
 
   const loadUser = async () => {
     const user = await getById(userId);

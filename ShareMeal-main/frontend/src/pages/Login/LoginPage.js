@@ -23,7 +23,7 @@ export default function LoginPage() {
     if (!user) return;
 
     returnUrl ? navigate(returnUrl) : navigate('/');
-  }, [user]);
+  },[navigate, returnUrl, user]);
 
   const submit = async ({ email, password }) => {
     await login(email, password);

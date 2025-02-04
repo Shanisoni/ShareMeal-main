@@ -46,7 +46,7 @@ export default function OrdersPage() {
           {allStatus.map(state => (
             <Link
               key={state}
-              className={state == filter ? classes.selected : ''}
+              className={state === filter ? classes.selected : ''}
               to={`/orders/${state}`}
             >
               {state}

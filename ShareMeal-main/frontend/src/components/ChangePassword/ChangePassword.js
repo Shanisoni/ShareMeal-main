@@ -47,7 +47,7 @@ export default function ChangePassword() {
           {...register('confirmNewPassword', {
             required: true,
             validate: value =>
-              value != getValues('newPassword')
+              value !== getValues('newPassword')
                 ? 'Passwords Do No Match'
                 : true,
           })}

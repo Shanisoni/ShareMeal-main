@@ -3,7 +3,7 @@ import classes from './foodEdit.module.css';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
 import { add, getById, update } from '../../services/foodService';
-import Title from '../../components/Title/Title';
+// import Title from '../../components/Title/Title';
 import InputContainer from '../../components/InputContainer/InputContainer';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
@@ -33,7 +33,7 @@ export default function FoodEditPage() {
       reset(food);
       setImageUrl(food.imageUrl);
     });
-  }, [foodId]);
+  }, [foodId, isEditMode, reset]);
 
   const submit = async foodData => {
     const food = { ...foodData, imageUrl };

@@ -13,7 +13,7 @@ export default function UsersPage() {
 
   useEffect(() => {
     loadUsers();
-  }, [searchTerm]);
+  }, [searchTerm , loadUsers]);
 
   const loadUsers = async () => {
     const users = await getAll(searchTerm);
