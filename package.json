@@ -7,7 +7,8 @@
     "start":"cd backend && npm start",
     "prebuild":"cd backend && npm install & cd frontend && npm install",
     "build": "cd frontend && npm run build",
-    "postbuild": "if not exist \"..\\backend\\src\\public\" mkdir \"..\\backend\\src\\public\" && move build \"..\\backend\\src\\public\""
+    "postbuild": "mv -f frontend/build backend/src/public"
+
 
 
   },
