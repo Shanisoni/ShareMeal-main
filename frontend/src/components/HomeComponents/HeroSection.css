@@ -19,6 +19,7 @@
     width: 100vw;
     margin-right: 0;
     margin-left: 10px;
+    margin-bottom: 100px;
   }
   h1 span{
     /* border: 2px solid red; */
@@ -92,12 +93,26 @@
   
   @media (max-width: 447px) {
     .title {
-      font-size: 1.5rem; /* sm:text-4xl */
+      font-size: 3.0rem; /* sm:text-4xl */
+      margin-top: 68px;
+      margin-bottom: 8px;
     }
     h1 span{
       font-size: 1.5rem;
     }
     
+  }
+
+  @media (max-width: 768px) {
+    .titl {
+      font-size: 1.8rem; 
+      /* margin-top: 1 98px; */
+      /* margin-bottom: 108px; */
+    }
+    /* h1 span{
+      font-size: 1.5rem;
+    }
+     */
   }
   @media (min-width: 640px) {
     .title {
@@ -142,10 +157,17 @@
     margin-bottom: 2rem; /* mb-8 */
     line-height: 1.625; /* leading-relaxed */
   }
+  @media (max-width:768px){
+    .description{
+      display: none;
+      /* margin-top: 10px; */
+    }
+  }
   
   /* Button styles */
   .button-group {
     display: flex;
+    margin-top: 60px;
    
   }
   @media (max-width:768px){

@@ -7,7 +7,7 @@ const TeamSection = () => {
       <div className="container2">
         <div className="text-center2 mb-20">
           <h1 className="title2">Meet Our Team</h1>
-          <p className="description2">Our dedicated team is committed to reducing food waste and supporting communities. With diverse expertise in technology and outreach, we ensure ShareMeal connects surplus food effectively.<br></br> Get to know us!</p>
+          <p className="description2">Our team drives ShareMeal to fight food waste and nourish communities! 🚀</p>
         </div>
         <div className="team-grid">
           <div className="team-member">
@@ -15,7 +15,7 @@ const TeamSection = () => {
               <img alt="team" className="member-img" src="/images/abhi.jpg" />
               <div className="member-details">
                 <h2 className="member-name">Abhishek Tripathi</h2>
-                <p className="member-role">Web Designer and Developer</p>
+                <p className="member-role">Web Designer</p>
               </div>
             </div>
           </div>
@@ -24,7 +24,7 @@ const TeamSection = () => {
               <img alt="team" className="member-img" src="/images/shani.jpg" />
               <div className="member-details">
                 <h2 className="member-name">Shani Soni</h2>
-                <p className="member-role">Web Designer</p>
+                <p className="member-role">Web Developer</p>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@ const TeamSection = () => {
               </div>
             </div>
           </div>
-          <div className="team-member">
+          {/* <div className="team-member">
             <div className="member-info">
               <img alt="team" className="member-img" src="/images/manish.jpg" />
               <div className="member-details">
@@ -45,8 +45,8 @@ const TeamSection = () => {
                 <p className="member-role">Content Manager</p>
               </div>
             </div>
-          </div>
-          <div className="team-member">
+          </div> */}
+          {/* <div className="team-member">
             <div className="member-info">
               <img alt="team" className="member-img" src="/images/prashant.jpg" />
               <div className="member-details">
@@ -54,7 +54,7 @@ const TeamSection = () => {
                 <p className="member-role">Content Manager</p>
               </div>
             </div>
-          </div>
+          </div> */}
           
         </div>
       </div>

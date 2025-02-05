@@ -1,4 +1,4 @@
-.team-section {
+.team-section{
   padding-top: 4rem;
   
   background-color: #000319;
@@ -6,8 +6,19 @@
   font-family: sans-serif;
   /* border: 3px solid red; */
   margin:0;
+  margin-top: -200px;
   padding: 24px 5%;
+  margin-bottom: 1px;
+  margin-top: 100px;
   
+}
+@media (min-width: 768px) {
+  .team-section {
+    /* flex-direction: row;
+    padding: 24px 5%; */
+    margin-top: -109px;
+
+  }
 }
 
 .container2 {
@@ -21,6 +32,7 @@
 .text-center2 {
   color: whitesmoke;
   text-align: center;
+  /* margin-top: 100px; */
 }
 
 .mb-20 {
@@ -29,9 +41,17 @@
 
 .title2 {
   margin-bottom: 0.5rem;
-  font-size: 2rem; /* Default font size */
+  font-size: 3rem; /* Default font size */
   font-weight: 500;
   color: white;
+  margin-top: 40px;
+}
+@media (max-width:768px){
+  .title2{
+    /* justify-content: center; */
+    margin-top: -270px;
+    /* font-size: 200rem; */
+  }
 }
 
 .description2 {
@@ -39,7 +59,9 @@
   color: #bec1dd;
   margin: auto;
   line-height: 1.5;
-  font-size: 1rem; /* Default font size */
+  font-size: 1.2rem; /* Default font size */
+  margin-bottom: 100px;
+  margin-top: 20px;
 }
 
 /* Team grid setup */
@@ -48,6 +70,7 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 /* Team member card */
@@ -58,7 +81,9 @@
   display: flex;
   /* transform: scale(1.05); */
   border-radius: 8px;
-  width: calc(33.3333% - 16px); /* Adjusted to include gap */
+  /* width: calc(33.3333% - 66px); Adjusted to include gap */
+  width: 350px;
+  height: 200px;
   box-sizing: border-box; /* Ensure padding is included in the width */
 
   transition: transform 0.3s ease-in-out;
