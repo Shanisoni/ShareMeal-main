@@ -9,12 +9,14 @@ const HeroSection = () => {
       <div className="container">
         <div className="text-content">
           <h1 className="title">
-          Share 
+          Share Meal
            <br/>
            <span>Connecting Hearts Through Meals</span>
           </h1>
           <p className="description">
-          Join ShareMeal to connect surplus food with those in need. Individuals and organizations alike can easily share and collect meals, helping to reduce food waste and support the community. Start making a difference today!
+          Join ShareMeal to connect surplus food with those in need. <br/>
+          Individuals and organizations alike can easily share and collect meals, <br/>
+          helping to reduce food waste and support the community. 
           </p>
           <div className="button-group">
             <Link to="/admin/addFood">
