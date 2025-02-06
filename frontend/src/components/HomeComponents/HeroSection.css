@@ -1,4 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap'); */
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-display: swap;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700; /* Adjust weight as needed */
+}
+
+
+
 /* Styles for the hero section */
+
+
 :root {
   --primary-color: rgba(231, 231, 231, 0.92); 
   /* --secondary-color: #2ecc71; 
@@ -24,6 +42,10 @@
   h1 span{
     /* border: 2px solid red; */
     font-size: 2.2rem;
+  }
+  .titl{
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
   }
  
   
@@ -85,9 +107,10 @@
     /* border: 2px solid green; */
     margin-top: -2rem;
     margin-bottom: 1.2rem;
-    font-size: 2rem; /* text-3xl */
+    font-size: 9rem; /* text-3xl */
     margin-bottom: rem; /* mb-4 */
-    font-weight: 525; /* font-medium */
+    font-weight: 625; /* font-medium */
+    letter-spacing: 1px;
      /* text-gray-900 */
   }
   
@@ -116,7 +139,7 @@
   }
   @media (min-width: 640px) {
     .title {
-      font-size: 2rem; /* sm:text-4xl */
+      font-size: 4rem; /* sm:text-4xl */
     }
     h1 span{
       font-size: 1.5rem;
@@ -132,7 +155,7 @@
   }
   @media (min-width:1438px) {
     .title {
-      font-size: 3rem; /* sm:text-4xl */
+      font-size: 4.3rem; /* sm:text-4xl */
     }
     h1 span{
       font-size: 1.5rem;
@@ -146,12 +169,13 @@
   } */
   
   @media (min-width: 1024px) {
-    .hidden-on-small-screen {
+    .hidden-on-small-screen { 
       display: block;
     }
   }
   
   .description {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: 17px;
     margin-top: 1rem;
     margin-bottom: 2rem; /* mb-8 */

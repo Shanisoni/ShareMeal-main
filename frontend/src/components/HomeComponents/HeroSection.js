@@ -11,8 +11,9 @@ const HeroSection = () => {
           <h1 className="title">
           Share Meal
            <br/>
-           <span className="titl" >Connecting Hearts Through Meals</span>
+           
           </h1>
+          <span className="titl" >Connecting Hearts Through Meals</span>
           <p className="description">
           Join ShareMeal to connect surplus food with those in need. <br/>
           Individuals and organizations alike can easily share and collect meals, <br/>
