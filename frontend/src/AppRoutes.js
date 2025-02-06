@@ -124,7 +124,9 @@ export default function AppRoutes() {
             <UserEditPage />
           </AdminRoute>
         }
+
       />
+       {/* <Contact/> */}
     </Routes>
   );
 }

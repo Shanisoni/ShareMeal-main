@@ -5,6 +5,7 @@ import { useLoading } from './hooks/useLoading';
 // import { setLoadingInterceptor } from './interceptors/loadingInterceptor';
 import { useEffect } from 'react';
 import './App.css';
+// import Contact from './components/contact';
 
 function App() {
   const { showLoading, hideLoading } = useLoading();
@@ -20,6 +21,7 @@ function App() {
       <Loading />
       <Header />
       <AppRoutes />
+     
    </div>
   );
 }

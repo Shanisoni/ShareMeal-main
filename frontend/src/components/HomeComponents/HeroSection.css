@@ -35,10 +35,13 @@ h1, h2, h3 {
     color: var(--primary-color);
     font-family: 'Helvetica Neue', Arial, sans-serif; /* body-font */
     width: 100vw;
+    /* height: 45vw; */
     margin-right: 0;
     margin-left: 10px;
     margin-bottom: 100px;
   }
+
+  
   h1 span{
     /* border: 2px solid red; */
     font-size: 2.2rem;
@@ -160,6 +163,9 @@ h1, h2, h3 {
     h1 span{
       font-size: 1.5rem;
       line-height: 1px;
+    }
+    .hero-section{
+      margin-top: 20px;
     }
   }
   

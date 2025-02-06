@@ -5,7 +5,7 @@ import backgroundImage from "../../images/bg.jpg"
 
 const HeroSection = () => {
   return (
-    <section className="hero-section"style={{ backgroundImage: `url(${backgroundImage})` }} >
+    <section className="hero-section" style={{ backgroundImage: `url(${backgroundImage})` }} >
       <div className="container">
         <div className="text-content">
           <h1 className="title">
