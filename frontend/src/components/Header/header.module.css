@@ -1,156 +1,109 @@
-/* Header Container */
 .header {
-  display: flex;
-  justify-content: space-between; /* Ensures logo & hamburger are properly spaced */
-  align-items: center;
-  background-color: rgb(3,47,60);
+  background-color: #0a0e1a; /* Dark navy background */
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1001;
-  height: 70px;
-  box-shadow: rgba(237, 236, 236, 0.299) 0px 8px 16px 0px;
 }
 
-/* Container for Logo and Hamburger */
 .container {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  padding: 0 15px;
-  justify-content: space-between; /* Ensures logo and hamburger are spaced apart */
 }
 
-/* Logo */
 .logo {
-  color: white;
-  font-size: 1.5em;
+  font-size: 28px;
   font-weight: bold;
+  font-family: "Cursive", sans-serif;
+  color: white;
   text-decoration: none;
-  margin-left: 20px;
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  margin-left: auto; /* Align hamburger to the right side */
+.logo img {
+  width: 40px; /* Adjust logo size */
+  height: 40px;
+  margin-right: 10px;
 }
 
-/* Close icon (X) for hamburger */
-.close {
-  font-size: 1.8rem;
-  color: white;
-}
-
-/* Burger icon (hamburger) */
-.burger {
-  font-size: 1.8rem;
-  color: white;
-}
-
-/* Nav Menu */
 .nav {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  color: #1a1717;
-  display: none;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 9px;
-  padding: 12px 40px 24px 40px;
-  background: rgba(231, 229, 229, 0.2); /* 20% visible */
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Show the menu when open */
-.nav.open {
   display: flex;
-  transform: translateY(0);
-  opacity: 1;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center; /* Center navigation items */
 }
 
-/* Menu List */
 .nav ul {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   list-style: none;
-  font-size: 1.2rem;
-  gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Add spacing between links */
   padding: 0;
   margin: 0;
 }
 
 .nav ul li {
-  padding: 10px 0;
+  display: flex;
 }
 
 .nav ul li a {
-  /* font-weight: 100rem; */
-  color: rgb(177, 185, 185);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 15px;
+  border: 1.5px solid transparent;
+  border-radius: 28px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Mobile Styles */
-@media (max-width: 880px) {
-  .container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    order: 1;
-  }
-
-  .hamburger {
-    order: 2;
-    display: block;
-    margin-left: auto; /* Align hamburger to the right side */
-  }
-
-  .header {
-    padding: 10px 20px;
-    border-radius: 0px 0px 17px 10px;
-  }
+.nav ul li a:hover {
+  border-color: #ffd700;
+  color: #ffd700;
 }
 
-/* Large screen fixes */
-@media (min-width: 881px) {
+.hamburger {
+  display: none; /* Hide hamburger menu on larger screens */
+}
+
+/* Dropdown user menu */
+.user-menu {
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #a874ff; /* Purple color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .nav {
-    display: flex !important;
-    flex-direction: row;
-    position: static;
-    background: none;
-    box-shadow: none;
-    opacity: 1;
-    transform: none;
-    align-items: center;
-    width: auto;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #0a0e1a;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .nav.open {
+    display: flex;
   }
 
   .nav ul {
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .hamburger {
-    display: none;
+    display: block;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
   }
 }

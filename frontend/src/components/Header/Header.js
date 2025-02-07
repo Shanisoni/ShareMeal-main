@@ -16,37 +16,45 @@ export default function Header() {
     <header className={classes.header}>
       <div className={classes.container}>
         {/* ShareMeal Logo (Left in mobile) */}
-        <Link to="/" className={classes.logo}>
+        <Link to="/" className={classes.logo} id="heroname">
+          <img src="/images/logo.png" alt="Logo" />
           ShareMeal
         </Link>
 
-        {/* Hamburger Menu (Right in mobile) */}
+        {/* Navigation Menu */}
+        <nav className={`${classes.nav} ${menuOpen ? classes.open : ""}`}>
+          <ul>
+            {user ? (
+              <>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact Us</Link>
+                </li>
+                <li>
+                  <Link to="/dashboard">Dashboard</Link>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            )}
+          </ul>
+        </nav>
+
+        {/* User Menu */}
+        {user && <DropdownMenu user={user} logout={logout} className={classes.userMenu} />}
+
+        {/* Hamburger Menu */}
         <div className={classes.hamburger} onClick={toggleMenu}>
-          {menuOpen ? (
-            <span className={classes.close}>&#x2715;</span> // Close icon
-          ) : (
-            <span className={classes.burger}>&#9776;</span> // Hamburger icon
-          )}
+          {menuOpen ? <span className={classes.close}>&#x2715;</span> : <span className={classes.burger}>&#9776;</span>}
         </div>
       </div>
-
-      {/* Navigation Menu */}
-      <nav className={`${classes.nav} ${menuOpen ? classes.open : ""}`}>
-  <ul>
-    {user ? (
-      <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact Us</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <DropdownMenu user={user} logout={logout} isOpen={menuOpen} />
-      </>
-    ) : (
-      <li><Link to="/login">Login</Link></li>
-    )}
-  </ul>
-</nav>
-
     </header>
   );
 }
