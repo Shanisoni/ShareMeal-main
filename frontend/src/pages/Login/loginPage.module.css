@@ -1,34 +1,298 @@
-.container{
-  width: 100%;
-  height: 100vh;
+/* 🌟 Background Styling */
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid red; */
-  margin-top: 2rem;
- 
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a, #111a32);
+  gap: 2rem; /* Adds space between image and login box */
 }
 
-.details {
-  width: 28rem;
-  margin: 1rem;
-  /* border: 2px solid white; */
+/* 🎨 Image Styling */
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.details form {
+.image {
+  width: 130%;
+  max-width: 550px;
+  margin-left: -400px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🔹 Login Box */
+.loginBox {
+  width: 450px;
+  padding: 2rem;
+  margin-right: 220px;
+  background: rgba(255, 255, 255, 0.15); /* Glassmorphism */
+  /* backdrop-filter: blur(10px); */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.register {
-  color:white;
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: slideIn 1s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
+.loginBox:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.15);
 }
-.register > a{
-  color:white;
+
+/* 🏷️ Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 5px rgba(255, 255, 255, 0.2);
 }
+
+/* ✏️ Label */
+.label {
+  display: block;
+  text-align: left;
+  margin-top: 12px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #ddd;
+}
+
+/* 🔹 Input Fields */
+.input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 🛑 Error Messages */
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* ✅ Submit Button */
+.button {
+  background: linear-gradient(90deg, #ff8c00, #ff4500);
+  border: none;
+  color: white;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #ff6500, #ff3b00);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.5);
+  transform: scale(1.05);
+}
+
+
+.button{
+  /* background: linear-gradient(90deg, #ff6500, #ff3b00);
+  box-shadow: 0 8px 20px rgba(255, 140, 0, 0.5);
+  transform: scale(1.05); */
+  margin-top: 10px;
+  /* padding-left: -10px; */
+  /* margin-right: -90px; */
+  /* width: 200px; */
+}
+
+/* ➗ Divider */
+.divider {
+  margin: 15px 0;
+  color: #bbb;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* 🔵 Social Buttons */
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.socialButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* 📩 Register Link */
+.register {
+  margin-top: 1rem;
+  color: #fff;
+  margin-left: 18px;
+}
+
+.register a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imageContainer {
+    margin-bottom: 20px;
+  }
+
+  .image {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .loginBox {
+    width: 90%;
+  }
+}
+
+/* 🔵 Social Buttons */
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* 🔵 Social Buttons */
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  /* width: 10px; */
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Google Button */
+.google {
+  background: #fff;
+  color: #000;
+  border: 1px solid #db4437;
+}
+
+.google:hover {
+  background: #db4437;
+  color: #fff;
+}
+
+/* Facebook Button */
+.facebook {
+  background: #fff;
+  color: #1877f2;
+  border: 1px solid #1877f2;
+}
+
+.facebook:hover {
+  background: #1877f2;
+  color: #fff;
+}
+
+/* Icons inside buttons */
+.icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+/* Google Icon */
+.google .icon {
+  background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

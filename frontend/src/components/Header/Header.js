@@ -27,28 +27,31 @@ export default function Header() {
             {user ? (
               <>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="headertext" >Home</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about" className="headertext">About</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact" className="headertext">Contact Us</Link>
                 </li>
                 <li>
-                  <Link to="/dashboard">Dashboard</Link>
+                  <Link to="/dashboard" className="headertext">Dashboard</Link>
                 </li>
               </>
-            ) : (
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-            )}
+            ) : null}
           </ul>
         </nav>
 
         {/* User Menu */}
         {user && <DropdownMenu user={user} logout={logout} className={classes.userMenu} />}
+
+        {/* Login Button (Shifted to Right) */}
+        {!user && (
+          <li className={`${classes.loginButton}`}>
+            <Link to="/login">Login</Link>
+          </li>
+        )}
 
         {/* Hamburger Menu */}
         <div className={classes.hamburger} onClick={toggleMenu}>

@@ -2,11 +2,10 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
+import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import classes from './loginPage.module.css';
-import Title from '../../components/Title/Title';
-import Input from '../../components/Input/Input';
-import Button from '../../components/Button/Button';
-import { EMAIL } from '../../constants/patterns';
+import loginImage from "./svg.png"; // Import image
+
 export default function LoginPage() {
   const {
     handleSubmit,
@@ -21,9 +20,8 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (!user) return;
-
     returnUrl ? navigate(returnUrl) : navigate('/');
-  },[navigate, returnUrl, user]);
+  }, [navigate, returnUrl, user]);
 
   const submit = async ({ email, password }) => {
     await login(email, password);
@@ -31,35 +29,57 @@ export default function LoginPage() {
 
   return (
     <div className={classes.container}>
-      <div className={classes.details}>
-        <Title title="Login" />
+      {/* Left Side Image */}
+      <div className={classes.imageContainer}>
+        <img src={loginImage} alt="Login Illustration" className={classes.image} />
+      </div>
+
+      {/* Right Side Login Box */}
+      <div className={classes.loginBox}>
+        <h2 className={classes.title}>Sign in</h2>
+
         <form onSubmit={handleSubmit(submit)} noValidate>
-          <Input
+          <label className={classes.label}>Email</label>
+          <input
             type="email"
-            label="Email"
-            {...register('email', {
-              required: true,
-              pattern: EMAIL,
-            })}
-            error={errors.email}
+            placeholder="your@email.com"
+            {...register('email', { required: true })}
+            className={classes.input}
           />
+          {errors.email && <p className={classes.error}>Email is required</p>}
 
-          <Input
+          <label className={classes.label}>Password</label>
+          <input
             type="password"
-            label="Password"
-            {...register('password', {
-              required: true,
-            })}
-            error={errors.password}
+            placeholder="••••••••"
+            {...register('password', { required: true })}
+            className={classes.input}
           />
+          {errors.password && <p className={classes.error}>Password is required</p>}
 
-          <Button type="submit" text="Login" color="white" backgroundColor = "blue" />
+          <div className={classes.checkboxContainer}>
+            <input type="checkbox" id="updates" className={classes.checkbox} />
+            <label htmlFor="updates"> I want to receive updates via email</label>
+          </div>
+
+          <button type="submit" className={classes.button}>Sign in</button>
+
+          <div className={classes.divider}>or</div>
+
+          {/* Google Login */}
+          <button type="button" className={`${classes.socialButton} ${classes.google}`}>
+            <FaGoogle className={classes.icon} />
+            Sign in with Google
+          </button>
+
+          {/* Facebook Login */}
+          <button type="button" className={`${classes.socialButton} ${classes.facebook}`}>
+            <FaFacebook className={classes.icon} />
+            Sign in with Facebook
+          </button>
 
           <div className={classes.register}>
-            New user? &nbsp;
-            <Link to={`/register${returnUrl ? '?returnUrl=' + returnUrl : ''}`}>
-              Register here
-            </Link>
+            Don't have an account? <Link to={`/register${returnUrl ? '?returnUrl=' + returnUrl : ''}`}>Sign up</Link>
           </div>
         </form>
       </div>

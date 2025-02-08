@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+
 .header {
-  background-color: #0a0e1a; /* Dark navy background */
+  background-color: #142a6b; /* Dark navy background */
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -14,9 +19,9 @@
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
-  font-family: "Cursive", sans-serif;
+  font-family: "Lugrasimo", serif;
   color: white;
   text-decoration: none;
   display: flex;
@@ -24,9 +29,9 @@
 }
 
 .logo img {
-  width: 40px; /* Adjust logo size */
-  height: 40px;
-  margin-right: 10px;
+  width: 50px; /* Adjust logo size */
+  height: 50px;
+  margin-right: 2px;
 }
 
 .nav {
@@ -42,7 +47,7 @@
   align-items: center;
   gap: 40px; /* Add spacing between links */
   padding: 0;
-  margin: 0;
+  margin-right: -810px;
 }
 
 .nav ul li {
@@ -51,8 +56,9 @@
 
 .nav ul li a {
   color: white;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
+  letter-spacing: 1.5px;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   padding: 10px 15px;
@@ -76,6 +82,32 @@
   font-size: 16px;
   font-weight: 500;
   color: #a874ff; /* Purple color */
+}
+
+/* Login Button */
+.loginButton {
+  margin-left: auto; /* Pushes it to the right */
+  /* font-size: 20px; */
+  padding: -4px 8px;
+  background-color: #a3a3a3; /* Gold color */
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.loginButton a {
+  color: #000000; /* Dark blue text */
+  font-size: 21px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 9px 21px;
+  display: inline-block;
+  border-radius: 0px;
+}
+
+.loginButton:hover {
+  background-color: #ffcc00; /* Lighter gold on hover */
+  transform: scale(1.05); /* Slight scale effect */
 }
 
 /* Responsive Design */
