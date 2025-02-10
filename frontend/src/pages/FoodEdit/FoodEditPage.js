@@ -1,15 +1,15 @@
-import { useParams } from 'react-router-dom';
-import classes from './foodEdit.module.css';
-import { useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
-import { add, getById, update } from '../../services/foodService';
+import { useParams } from "react-router-dom";
+import classes from "./foodEdit.module.css";
+import { useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
+import { add, getById, update } from "../../services/foodService";
 // import Title from '../../components/Title/Title';
-import InputContainer from '../../components/InputContainer/InputContainer';
-import Input from '../../components/Input/Input';
-import Button from '../../components/Button/Button';
-import { uploadImage } from '../../services/uploadService';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import InputContainer from "../../components/InputContainer/InputContainer";
+import Input from "../../components/Input/Input";
+import Button from "../../components/Button/Button";
+import { uploadImage } from "../../services/uploadService";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function FoodEditPage() {
   const { foodId } = useParams();
@@ -28,14 +28,14 @@ export default function FoodEditPage() {
   useEffect(() => {
     if (!isEditMode) return;
 
-    getById(foodId).then(food => {
+    getById(foodId).then((food) => {
       if (!food) return;
       reset(food);
       setImageUrl(food.imageUrl);
     });
   }, [foodId, isEditMode, reset]);
 
-  const submit = async foodData => {
+  const submit = async (foodData) => {
     const food = { ...foodData, imageUrl };
 
     if (isEditMode) {
@@ -46,10 +46,10 @@ export default function FoodEditPage() {
 
     const newFood = await add(food);
     toast.success(`Food "${food.name}" added successfully!`);
-    navigate('/admin/editFood/' + newFood.id, { replace: true });
+    navigate("/admin/editFood/" + newFood.id, { replace: true });
   };
 
-  const upload = async event => {
+  const upload = async (event) => {
     setImageUrl(null);
     const imageUrl = await uploadImage(event);
     setImageUrl(imageUrl);
@@ -66,7 +66,9 @@ export default function FoodEditPage() {
           noValidate
         >
           <InputContainer label="Select Image">
-            <input type="file" onChange={upload} accept="image/jpeg" />
+            <div class="file-upload-container">
+              <input type="file" onChange={upload} accept="image/jpeg" />
+            </div>
           </InputContainer>
 
           {imageUrl && (
@@ -78,39 +80,39 @@ export default function FoodEditPage() {
           <Input
             type="text"
             label="Food Name"
-            {...register('name', { required: true, minLength: 5 })}
+            {...register("name", { required: true, minLength: 5 })}
             error={errors.name}
           />
 
           <Input
             type="number"
             label="Quanitity (in Kg)"
-            {...register('price', { required: true })}
+            {...register("price", { required: true })}
             error={errors.price}
           />
 
           <Input
             type="text"
             label="City"
-            {...register('tags')}
+            {...register("tags")}
             error={errors.tags}
           />
 
           <Input
             type="text"
             label="Locality"
-            {...register('origins', { required: true })}
+            {...register("origins", { required: true })}
             error={errors.origins}
           />
 
           <Input
             type="text"
             label="Expiry Time"
-            {...register('cookTime', { required: true })}
+            {...register("cookTime", { required: true })}
             error={errors.cookTime}
           />
 
-          <Button type="submit" text={isEditMode ? 'Update' : 'Upload'} />
+          <Button type="submit" text={isEditMode ? "Update" : "Upload"} />
         </form>
       </div>
     </div>

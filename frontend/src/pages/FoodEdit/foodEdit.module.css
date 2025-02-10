@@ -1,53 +1,193 @@
+/* General Container Styling */
 .container {
   display: flex;
   justify-content: center;
-  margin-bottom: 10rem;
-  /* border: 2px solid red; */
-  margin-top: 4rem;
-  color:white;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #382c97);
+  padding: 2rem;
 }
 
-
-.content,
-.form {
-  color:white;
+/* File Upload - Improved Layout */
+.file-upload-container {
   display: flex;
   flex-direction: column;
-  max-width: 25rem;
-  width: 100%;
-}
-.form{
-  margin-top: 2rem; 
-}
-
-.content h1{
+  align-items: center;
+  margin-top: 90px !important;
+  justify-content: center;
+  width: 10% !important;
+  max-width: 250px; /* Increased for better visibility */
+  padding: 1.5rem;
+  border: 2px dashed white;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease-in-out;
+  position: relative;
   text-align: center;
+  cursor: pointer;
 }
 
+.file-upload-container:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Label Styling */
+.file-label {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Hide Default File Input */
+.file-upload-container input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Improved File Input */
+input[type="file"] {
+  border: 2px dashed rgb(23, 124, 182);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+  /* height: 10% !important; */
+  display: block;
+  padding: -20rem;
+  background: rgba(83, 84, 87, 0.1);
+  border-radius: 8px;
+}
+
+input[type="file"]:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Content Box */
+.content {
+  background: rgba(34, 158, 167, 0.281);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  max-width: 30rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.content:hover {
+  box-shadow: 0 10px 40px rgba(31, 38, 135, 0.5);
+}
+
+/* Title */
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input Fields */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-container label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* Image Preview */
 .image_link {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  padding: 0;
-  width: 100%;
-  /* height: 20rem; */
-  border-radius: 1rem;
-  /* border: 1px solid #e0e0e0; */
-  margin: 0 0 1rem 0;
+  margin-top: 1rem;
 }
 
 .image_link img {
-  object-fit: cover;
   width: 100%;
-  height: 100%;
-  border-radius: 1rem;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
 }
-@media(max-width:500px){
-  .image_link img {
-    object-fit: cover;
-    width: 100%;
-    height:100%;
-    border-radius: 1rem;
-    /* border: 2px solid red; */
+
+.image_link img:hover {
+  transform: scale(1.05);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #ff7eb3;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #ff5e99;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .content {
+    padding: 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
   }
 }

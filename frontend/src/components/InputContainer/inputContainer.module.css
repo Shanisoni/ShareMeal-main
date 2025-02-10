@@ -1,8 +1,8 @@
 .container {
   
   position: relative;
-  /* margin-bottom: 0.5rem; */
-  border-radius: 0.7rem;
+  margin-bottom: -.5rem;
+  /* border-radius: 0.7rem; */
   /* padding-top: 0.3rem; */
   /* border: 1px solid red; */
 }
@@ -11,8 +11,8 @@
   /* border: 2px solid yellow; */
   display: inline-block;
   margin-left: 1rem;
-  color: white;
-  font-size: 0.9rem;
+  color: rgb(233, 233, 233);
+  font-size: 1.1rem !important;
 }
 
 .content {
@@ -20,6 +20,8 @@
   color: red;
   padding: 0 0.5rem;
   height: 2.7rem;
+  /* gap: 100px !important; */
   display: flex;
+  padding-bottom: -2rem !important;
   align-items: center;
 }

@@ -67,6 +67,7 @@ input {
   background: rgba(255, 255, 255, 0.15);
   color: white;
   font-size: 1rem;
+  /* gap: -19px !important; */
   /* ma */
   outline: none;
   transition: all 0.3s ease-in-out;
@@ -90,6 +91,7 @@ button {
   font-size: 1rem;
   font-weight: bold;
   border: none;
+  margin-top: -15px !important;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
