@@ -16,8 +16,8 @@ export default function ProfilePage() {
 
   const { user, updateProfile } = useAuth();
 
-  const submit = user => {
-    updateProfile(user);
+  const submit = (data) => {
+    updateProfile(data);
   };
 
   return (
@@ -37,7 +37,7 @@ export default function ProfilePage() {
           />
           <Input
             defaultValue={user.address}
-            type="text"
+            type="text" 
             label="Address"
             {...register('address', {
               required: true,
@@ -46,9 +46,10 @@ export default function ProfilePage() {
             error={errors.address}
           />
 
+          {/* Updated smaller button */}
           <Button type="submit" text="Update" backgroundColor="#009e84" />
         </form>
-
+<br/>
         <ChangePassword />
       </div>
     </div>

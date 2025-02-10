@@ -1,22 +1,114 @@
+/* Main Container */
 .container {
-  /* border: 2px solid red; */
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  margin-top: 4rem;
-  
+  height: 100vh;
+  background: linear-gradient(135deg, #121212, #1e3c72, #2a5298);
+  padding: 2rem;
 }
 
+/* Profile Card & Form Container */
 .details {
- background-color: transparent;
- box-shadow: rgba(150, 149, 149, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(237, 236, 236, 0.299) 0px 8px 16px 0px;
- border: 0.0001rem solid #53525277;
-  margin-top: 15px;
-  /* margin-bottom: 2px; */
-  width: 70rem;
-  padding: 15px;
-  border-radius: 10px;
-  /* border: 2px solid red; */
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
+.details h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+/* Input Group (Label & Input) */
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Label Styling */
+label {
+  font-size: 1.01rem !important;
+  /* font-weight: bold; */
+  color: white;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1rem;
+  /* ma */
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-color: white;
+}
+
+/* Button Styling */
+button {
+  width: 35% !important;
+  height: 20% !important;
+  padding: 9px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, #ff7b00, #6e4011);
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff9900, #ffaa33);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .details {
+    width: 95%;
+    padding: 2rem;
+  }
 }
