@@ -296,3 +296,116 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .imageContainer {
+    margin-bottom: 20px;
+  }
+
+  .image {
+    width: 80%;
+    max-width: 350px;
+    margin-left: 0;
+  }
+
+  .loginBox {
+    width: 70%;
+    padding: 1.5rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .image {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .loginBox {
+    width: 65%;
+    padding: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .label, .input {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0;
+  }
+
+  .image {
+    width: 80%;
+    max-width: 220px;
+  }
+
+  .loginBox {
+    width: 75%;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .label, .input {
+    font-size: 0.85rem;
+  }
+
+  .button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .loginBox {
+    width: 80%;
+    padding: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .label, .input {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    font-size: 0.75rem;
+    padding: 7px;
+  }
+
+  .socialButton {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+}
+
+

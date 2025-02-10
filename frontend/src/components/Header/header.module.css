@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
 
-
+/* Header Styling */
 .header {
-  background-color: #142a6b; /* Dark navy background */
+  background-color: #142a6b;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  position: relative;
 }
 
 .container {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
 }
 
+/* Logo Styling */
 .logo {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
-  font-family: "Lugrasimo", serif;
   color: white;
   text-decoration: none;
   display: flex;
@@ -29,25 +29,25 @@
 }
 
 .logo img {
-  width: 50px; /* Adjust logo size */
+  width: 50px;
   height: 50px;
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
+/* Navigation Styling */
 .nav {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  justify-content: center; /* Center navigation items */
+  justify-content: center;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 40px; /* Add spacing between links */
+  gap: 30px;
   padding: 0;
-  margin-right: -810px;
 }
 
 .nav ul li {
@@ -56,9 +56,8 @@
 
 .nav ul li a {
   color: white;
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 500;
-  letter-spacing: 1.5px;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   padding: 10px 15px;
@@ -72,70 +71,117 @@
   color: #ffd700;
 }
 
-.hamburger {
-  display: none; /* Hide hamburger menu on larger screens */
-}
-
-/* Dropdown user menu */
-.user-menu {
-  margin-left: auto;
-  font-size: 16px;
-  font-weight: 500;
-  color: #a874ff; /* Purple color */
-}
-
-/* Login Button */
+/* Desktop Login Button */
 .loginButton {
-  margin-left: auto; /* Pushes it to the right */
-  /* font-size: 20px; */
-  padding: -4px 8px;
-  background-color: #a3a3a3; /* Gold color */
-  border-radius: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: auto;
+  background-color: #8b8b88;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .loginButton a {
-  color: #000000; /* Dark blue text */
+  color: #ebebeb;
   font-size: 21px;
-  font-weight: bold;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  padding: 9px 21px;
-  display: inline-block;
-  border-radius: 0px;
 }
 
 .loginButton:hover {
-  background-color: #ffcc00; /* Lighter gold on hover */
-  transform: scale(1.05); /* Slight scale effect */
+  background-color: #c0a823;
+  transform: scale(1.);
+  box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.4);
+}
+
+/* Hamburger Menu (Hidden on Large Screens) */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px; /* Shifted to Right */
+  top: 15px;
+}
+
+/* Mobile Menu (Hidden by Default) */
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: #0a0e1a;
+  padding: 20px;
+  text-align: center;
+}
+
+.mobileMenu.open {
+  display: block;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileMenu ul li {
+  margin: 10px 0;
+}
+
+.mobileMenu ul li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.mobileMenu ul li a:hover {
+  color: #ffd700;
+}
+
+/* Mobile Login Button (Inside Hamburger Menu) */
+.mobileLoginButton {
+  background-color: #ffcc00;
+  padding: 6px 15px;  /* Optimized padding */
+  border-radius: 6px;
+  margin: 10px auto;
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mobileLoginButton a {
+  color: #142a6b;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.mobileLoginButton:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: #0a0e1a;
-    width: 100%;
-    padding: 20px;
+    display: none; /* Hide normal nav */
   }
 
-  .nav.open {
-    display: flex;
-  }
-
-  .nav ul {
-    flex-direction: column;
-    gap: 15px;
+  .loginButton {
+    display: none; /* Hide normal login button */
   }
 
   .hamburger {
-    display: block;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+    display: block; /* Show hamburger on mobile */
   }
 }

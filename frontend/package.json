@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@fontsource/montserrat": "^5.1.1",
     "@mui/icons-material": "^6.4.3",
     "@mui/material": "^6.4.3",
     "@paypal/react-paypal-js": "^8.1.1",
@@ -27,6 +29,7 @@
     "react-toastify": "^9.1.2",
     "shadcn-ui": "^0.8.0",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.15",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

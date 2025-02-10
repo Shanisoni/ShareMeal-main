@@ -19,22 +19,22 @@ import FoodEditPage from './pages/FoodEdit/FoodEditPage';
 import UsersPage from './pages/UsersPage/UsersPage';
 import UserEditPage from './pages/UserEdit/UserEditPage';
 import FeatureSection from './components/HomeComponents/FeatureSection';
-
+import ContactPage from './pages/Contact/contact';  // Import Contact Page
 
 export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<HomePage0 />} />
-      <Route path="/homepage" element = {<HomePage/>}/>
+      <Route path="/homepage" element={<HomePage />} />
       <Route path="/search/:searchTerm" element={<HomePage />} />
       <Route path="/tag/:tag" element={<HomePage />} />
       <Route path="/food/:id" element={<FoodPage />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/about" element={<FeatureSection />} />
+      <Route path="/contact" element={<ContactPage />} />  {/* Contact Page Added */}
 
-      <Route path="/about" element={<FeatureSection/>} />
-      
       <Route
         path="/checkout"
         element={
@@ -91,7 +91,6 @@ export default function AppRoutes() {
           </AdminRoute>
         }
       />
-
       <Route
         path="/admin/addFood"
         element={
@@ -116,7 +115,6 @@ export default function AppRoutes() {
           </AdminRoute>
         }
       />
-
       <Route
         path="/admin/editUser/:userId"
         element={
@@ -124,9 +122,7 @@ export default function AppRoutes() {
             <UserEditPage />
           </AdminRoute>
         }
-
       />
-       {/* <Contact/> */}
     </Routes>
   );
 }

@@ -15,48 +15,45 @@ export default function Header() {
   return (
     <header className={classes.header}>
       <div className={classes.container}>
-        {/* ShareMeal Logo (Left in mobile) */}
-        <Link to="/" className={classes.logo} id="heroname">
+        <Link to="/" className={classes.logo}>
           <img src="/images/logo.png" alt="Logo" />
           ShareMeal
         </Link>
 
-        {/* Navigation Menu */}
-        <nav className={`${classes.nav} ${menuOpen ? classes.open : ""}`}>
+        <nav className={classes.nav}>
           <ul>
-            {user ? (
-              <>
-                <li>
-                  <Link to="/" className="headertext" >Home</Link>
-                </li>
-                <li>
-                  <Link to="/about" className="headertext">About</Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="headertext">Contact Us</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard" className="headertext">Dashboard</Link>
-                </li>
-              </>
-            ) : null}
+            <li><Link to="/" className="headertext">Home</Link></li>
+            <li><Link to="/about" className="headertext">About</Link></li>
+            <li><Link to="/contact" className="headertext">Contact</Link></li>
+            {user && <li><Link to="/dashboard" className="headertext">Dashboard</Link></li>}
           </ul>
         </nav>
 
-        {/* User Menu */}
-        {user && <DropdownMenu user={user} logout={logout} className={classes.userMenu} />}
-
-        {/* Login Button (Shifted to Right) */}
         {!user && (
-          <li className={`${classes.loginButton}`}>
+          <li className={classes.loginButton}>
             <Link to="/login">Login</Link>
           </li>
         )}
 
-        {/* Hamburger Menu */}
+        {user && <DropdownMenu user={user} logout={logout} className={classes.userMenu} />}
+
         <div className={classes.hamburger} onClick={toggleMenu}>
           {menuOpen ? <span className={classes.close}>&#x2715;</span> : <span className={classes.burger}>&#9776;</span>}
         </div>
+      </div>
+
+      <div className={`${classes.mobileMenu} ${menuOpen ? classes.open : ""}`}>
+        <ul>
+          <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+          <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
+          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+          {user && <li><Link to="/dashboard" onClick={toggleMenu}>Dashboard</Link></li>}
+          {!user && (
+            <li className={classes.mobileLoginButton}>
+              <Link to="/login" onClick={toggleMenu}>Login</Link>
+            </li>
+          )}
+        </ul>
       </div>
     </header>
   );

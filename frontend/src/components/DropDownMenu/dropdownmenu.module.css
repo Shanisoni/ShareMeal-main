@@ -1,58 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .menu_container {
   position: relative;
-  /* border: 3px solid red; */
-  /* margin-top: 10px; */
-
-  
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* Button to Open Dropdown */
+.userButton {
+  padding: 10px 15px;
+  background-color: #09a39c;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 0px rgba(194, 192, 192, 0.671);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.userButton:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Dropdown Menu */
 .menu {
-  /* border: 2px solid green; */
-  display: none;
-  width: 100%;
   position: absolute;
   top: 100%;
-  color:white;
   right: 0;
-  background-color: #010c20;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  z-index: 1002;
-  
-  
-}
-
-/* Show menu on hover */
-.menu_container:hover .menu,
-.menu_container:hover .menu,
-.menu:hover {
+  background: white;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
   display: block;
- 
+  visibility: hidden;
 }
 
+/* Show Menu when open */
+.menu_container .menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Menu Links */
 .menu a {
   display: block;
-  padding: 10px 20px;
-  color:white;
+  padding: 12px 15px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
-  
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect: Slide In Text & Background Change */
+.menu a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 42, 107, 0.1);
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover::before {
+  left: 0;
 }
 
 .menu a:hover {
-  background-color: #010c2003;
+  padding-left: 18px;
+  color: #142a6b;
+  font-weight: 600;
 }
 
-/* Media query for mobile screens */
+/* Logout Button Styling */
+.menu a:last-child {
+  color: red;
+  font-weight: bold;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .menu {
-
-    display: none;
     position: static;
     box-shadow: none;
+    width: auto;
+    background: transparent;
   }
- 
-  .menu_container.open .menu {
-    
-    display: block;
+
+  .menu a {
+    padding: 10px;
+    font-size: 16px;
   }
 }
