@@ -57,30 +57,31 @@ export default function LoginPage() {
           />
           {errors.password && <p className={classes.error}>Password is required</p>}
 
-          <div className={classes.checkboxContainer}>
+          {/* <div className={classes.checkboxContainer}>
             <input type="checkbox" id="updates" className={classes.checkbox} />
             <label htmlFor="updates"> I want to receive updates via email</label>
-          </div>
+          </div> */}
 
           <button type="submit" className={classes.button}>Sign in</button>
-
-          <div className={classes.divider}>or</div>
-
-          {/* Google Login */}
-          <button type="button" className={`${classes.socialButton} ${classes.google}`}>
-            <FaGoogle className={classes.icon} />
-            Sign in with Google
-          </button>
-
-          {/* Facebook Login */}
-          <button type="button" className={`${classes.socialButton} ${classes.facebook}`}>
-            <FaFacebook className={classes.icon} />
-            Sign in with Facebook
-          </button>
-
           <div className={classes.register}>
             Don't have an account? <Link to={`/register${returnUrl ? '?returnUrl=' + returnUrl : ''}`}>Sign up</Link>
           </div>
+
+          {/* <div className={classes.divider}>or</div> */}
+
+          {/* Google Login */}
+          {/* <button type="button" className={`${classes.socialButton} ${classes.google}`}> */}
+            {/* <FaGoogle className={classes.icon} /> */}
+            {/* Sign in with Google */}
+          {/* </button> */}
+
+          {/* Facebook Login */}
+          {/* <button type="button" className={`${classes.socialButton} ${classes.facebook}`}> */}
+            {/* <FaFacebook className={classes.icon} /> */}
+            {/* Sign in with Facebook */}
+          {/* </button> */}
+
+          
         </form>
       </div>
     </div>

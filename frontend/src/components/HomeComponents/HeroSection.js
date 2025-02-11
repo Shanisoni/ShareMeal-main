@@ -19,7 +19,7 @@ const HeroSection = () => {
           Individuals and organizations alike can easily share and collect meals, <br/>
           helping to reduce food waste and support the community. 
           </p>
-          <div className="button-group">
+          <div className="">
             <Link to="/admin/addFood">
             <button className="btn primary-btn">Donate</button>
             </Link>

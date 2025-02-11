@@ -1,107 +1,167 @@
+/* 🔹 General List Container */
 .list {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-  max-width: 1500px;
-  margin-top: 2rem;
-  /* border: 0px solid red; */
+  justify-content: center;
+  list-style: none;
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: auto;
+  gap: 1.5rem;
 }
 
-.list li a {
-  height: 22.5rem;
-  width: 15rem;
-  color:white;
-  /* border: 1px solid whitesmoke; */
-  border-radius: 1rem;
-  margin: 1.5rem;
-  display: flex;
-  flex-direction: column;
+/* 🔹 Modern Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(194, 190, 190, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
-  
-  box-shadow: rgba(150, 149, 149, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(237, 236, 236, 0.299) 0px 8px 16px 0px;
-     border: 0.0001rem solid #53525277;
-  transition: transform 0.2s ease-in-out;
+  width: 18rem;
+  /* backdrop-filter: blur(15px); */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
-.list li  a:hover{
-  transform: scale(1.03);
-}
-@media(max-width:647px){
-  .list li a{
-    height: 22.5rem;
-  width: 19rem;
 
-  }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Image Container */
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
 }
 
 .image {
   object-fit: cover;
-  height: 14.5rem;
+  height: 14rem;
+  width: 100%;
+  transition: transform 0.9s ease-in-out;
 }
 
-.content {
-  margin-top: 0.3rem;
-  padding: 0.5rem 1rem;
-  position: relative;
-  height: 7rem;
-  color:white;
+.card:hover .image {
+  transform: scale(1.1);
 }
 
+/* 🔹 Favorite Icon */
 .favorite {
   position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.2rem;
+  top: 12px;
+  right: 12px;
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.favorite.not {
-  color: grey;
+.favorite:hover {
+  background: rgba(255, 0, 0, 0.7);
+  cursor: pointer;
 }
 
-.stars {
-  margin: 0.5rem 0;
+/* 🔹 Card Content */
+.content {
+  padding: 1rem;
+  color: white;
+  text-align: center;
 }
 
+/* 🔹 Food Name */
+.name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.card:hover .name {
+  color: #d1ce25;
+}
+
+/* 🔹 Footer Section */
 .product_item_footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  color:white;
-}
-.product_item_footer h5{
+  align-items: center;
   margin-top: 0.5rem;
+  /* gap: 10px !important; */
+  font-size: 1rem;
+  color: #dcdcdc;
 }
 
-.origins span {
-  border-radius: 2rem;
-  background-color: #000319;
-  display: inline-block;
-  font-size: 0.8rem;
-  color: whitesmoke;
-  margin-right: 0.3rem;
-  padding: 0 ;
-  margin-top: 0.5rem;
-}
-
-.origins {
-  flex: 9;
-}
-
-.cook_time {
+/* 🔹 Tags & Expiry */
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.7rem;
   font-size: 0.9rem;
-  text-align: right;
+  gap:  .5rem;
+}
+
+.expiry {
+  background: #ff5252;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: white;
+}
+
+.tag {
+  background: #0a8829;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgb(240, 235, 235);
+}
+
+/* 🔹 Price Section */
+.priceContainer {
+  text-align: center;
+  margin-top: 0.7rem;
 }
 
 .price {
- 
-  display: flex;
-  /* border: 2px solid red; */
-  background-color: #000319;
-  justify-content: space-between;
-  color:white;
-  margin-top: 0.7rem;
-  font-size: 1.1rem;
-  
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #a88805;
+  transition: color 0.3s ease;
+}
+
+.card:hover .price {
+  color: #a30d64;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .image {
+    height: 12rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }

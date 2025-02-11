@@ -14,6 +14,11 @@ h1, h2, h3 {
 
 
 
+
+
+
+
+
 /* Styles for the hero section */
 
 
@@ -50,15 +55,17 @@ h1, h2, h3 {
     font-size: 30px;
     font-family: 'Montserrat Alternates', sans-serif;
   }
+
+  
  
   
   
   .container {
     /* border: 3px solid blue; */
     color: var(--primary-color);;
-    width: 100%;
+    /* width: 100%; */
     /* margin: 0 auto; */
-    padding: 24px 5%;
+    /* padding: 24px 5%; */
     display: flex;
     gap: 50px;
     flex-direction: column;
@@ -70,6 +77,7 @@ h1, h2, h3 {
     .container {
       flex-direction: row;
       padding: 24px 5%;
+      /* margin-top: 90px !important; */
     }
   }
   
@@ -94,7 +102,20 @@ h1, h2, h3 {
     .text-content {
       font-size: 0.8rem;
       text-align: center;
-      margin-bottom: 0;
+      margin-bottom: 10px !important;
+      padding-right: 16px;
+      
+    }
+    .container{
+      margin-top: 5rem;
+    }
+  }
+
+  @media (max-width: 467px) {
+    .text-content {
+      font-size: 0.8rem;
+      text-align: center;
+      margin-top: -80px !important;
       padding-right: 16px;
       
     }
@@ -117,22 +138,12 @@ h1, h2, h3 {
      /* text-gray-900 */
   }
   
-  @media (max-width: 447px) {
-    .title {
-      font-size: 3.0rem; /* sm:text-4xl */
-      margin-top: 68px;
-      margin-bottom: 8px;
-    }
-    h1 span{
-      font-size: 1.5rem;
-    }
-    
-  }
+ 
 
   @media (max-width: 768px) {
     .titl {
       font-size: 1.8rem; 
-      /* margin-top: 1 98px; */
+      margin-top: 198px !important;
       /* margin-bottom: 108px; */
     }
     /* h1 span{
@@ -148,12 +159,25 @@ h1, h2, h3 {
       font-size: 1.5rem;
     }
   }
+  @media (max-width: 447px) {
+    .title {
+      font-size: 3.0rem; /* sm:text-4xl */
+      margin-top: 68px;
+      margin-bottom: 8px;
+    }
+    h1 span{
+      font-size: 1.5rem;
+      margin-top: 90px !important;
+    }
+    
+  }
   @media (min-width:768px) {
     .title {
       font-size: 2.5rem; /* sm:text-4xl */
     }
     h1 span{
       font-size: 1.5rem;
+      /* margin-top: 90px !important; */
     }
   }
   @media (min-width:1438px) {
@@ -193,51 +217,95 @@ h1, h2, h3 {
       /* margin-top: 10px; */
     }
   }
+
+
   
-  /* Button styles */
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* General Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem; /* Default padding */
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  min-width: 140px; /* Default size for large screens */
+  text-align: center;
+}
+
+/* Hover Effect */
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Primary Button (Donate) */
+.primary-btn {
+  background-color: #4f46e5;
+  color: white;
+  margin-right: 50px;
+}
+
+.primary-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Secondary Button (Collect) */
+.secondary-btn {
+  background-color: #fdb62a;
+  color: black;
+}
+
+.secondary-btn:hover {
+  background-color: #f8af1f;
+}
+
+/* 🔹 Responsive Changes for Small Screens ONLY */
+@media (max-width: 768px) {
   .button-group {
-    display: flex;
-    margin-top: 60px;
-   
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 1.5rem !important;
+      align-items: center;
+      /* margin-top: 90px !important; */
   }
-  @media (max-width:768px){
-    .button-group{
-      justify-content: center;
-    }
-  }
+
   .btn {
-    display: inline-flex;
-    padding: 0.5rem 1.5rem;
-    border: none;
-    border-radius: 0.375rem;
-    font-size: 1.125rem; /* text-lg */
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;  
+      width: 80%; /* Reduce button width for small screens */
+      max-width: 200px; /* Limit width for better alignment */
+      padding: 0.5rem 1rem; /* Reduce padding */
+      font-size: 0.9rem; /* Slightly smaller font */
+      margin-top: 50px !important ;
   }
-  
-  .btn:hover{
-    transform: scale(1.1);
+}
+
+@media (max-width: 467px) {
+  .button-group {
+      flex-direction: column; /* Stack buttons vertically */
+      /* gap: -10.5rem !important; */
+      align-items: center;
+      /* margin-top: 90px !important; */
   }
-  
-  .primary-btn {
-    background-color: #4f46e5; /* bg-indigo-500 */
-    color: var(--primary-color);; /* text-white */
+
+  .btn {
+      width: 80%; /* Reduce button width for small screens */
+      max-width: 200px; /* Limit width for better alignment */
+      padding: 0.5rem 1rem; /* Reduce padding */
+      font-size: 0.9rem; /* Slightly smaller font */
+      margin-top: 50px !important ;
   }
-  
-  .primary-btn:hover {
-    background-color: #4338ca; /* hover:bg-indigo-600 */
-  }
-  
-  .secondary-btn {
-    background-color: #fdb62a; /* bg-gray-100 */
-    color: var(--primary-color); /* text-gray-700 */
-    margin-left: 1rem; /* ml-4 */
-  }
-  
-  .secondary-btn:hover {
-    background-color: #f8af1f; /* hover:bg-gray-200 */
-  }
-  
+}
+
+
   /* Styles for the image container */
   .image-container {
     flex: 1;

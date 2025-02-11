@@ -1,40 +1,81 @@
+/* Centering the search bar */
 .container {
   display: flex;
   justify-content: center;
-  
-  margin-top: 5rem;
+  align-items: center;
+  margin-top: 4rem;
   margin-bottom: 1.5rem;
-  
 }
 
+/* Search Input Field */
 .container input {
-border-right: 0;
-  border-radius: 10rem 0 0 10rem;
   border: none;
-  height: 3rem;
-  width: 20rem;
-  border: 0.5px solid rgba(245, 245, 245, 0.438);
-  background-color: #000319;
-  padding: 1.2rem;
+  height: 3.5rem;
+  width: 24rem;
+  padding: 1rem 1.5rem;
+  margin-left: 620px;
   font-size: 1rem;
   font-weight: 500;
-  outline: none;
-}
-
-.container button {
-  color: grey;
-  height: 3rem;
-  width: 5rem;
-  font-size: 1rem;
-  border-radius: 0 10rem 10rem 0;
-  border: none;
-  background-color: #e72929;
+  background-color: #0a0e29; /* Dark navy background */
   color: white;
-  opacity: 0.8;
+  border-radius: 50px 0 0 50px; /* Smooth rounded edges */
   outline: none;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
 }
 
-.container button:hover {
-  opacity: 1;
+/* Input Field Focus Effect */
+.container input:focus {
+  border-color: #4f46e5; /* Highlight border on focus */
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
+}
+
+/* Search Button */
+.container button {
+  height: 3.5rem !important; ;
+  width: 16rem !important;
+  margin-top: 1px !important;
+  font-size: 1rem;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #530353);
+  color: white;
+  border-radius: 0 50px 50px 0;
+  margin-right: 635px !important;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  font-weight: bold;
+}
+
+/* Button Hover Effect */
+.container button:hover {
+  background: linear-gradient(135deg, #5a54f3, #cb41d8);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .container input {
+    width: 90%;
+    border-radius: 50px;
+    /* height: 0rem !important; ; */
+  /* width: 0rem !important; */
+  /* margin-top: 0px !important; */
+  margin-right: 615px !important;
+  }
+
+  .container button {
+    width: 40% !important;
+    height: 10% !important;
+    border-radius: 50px;
+    margin-right: 119px !important;
+  }
 }
