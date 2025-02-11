@@ -192,9 +192,10 @@
   const ContactInput = styled.input`
     flex: 1;
     background-color: transparent;
-    border: 1px solid ${({ theme }) => theme.text_secondary + 50};
+    border: 1px solid rgba(105, 106, 109, 0.83);
     outline: none;
     font-size: 18px;
+    width: 19rem;
     color: white;
     border-radius: 12px;
     padding: 12px 16px;
@@ -213,6 +214,7 @@
 
     @media (max-width: 480px) {
       font-size: 14px;
+      width: 225px;
     }
   `;
 
@@ -222,7 +224,8 @@
     border: 1px solid ${({ theme }) => theme.text_secondary + 50};
     outline: none;
     height: 100px;
-    width: 255px;
+    margin-bottom: 10px;
+    width: 345px;
     font-size: 18px;
     color: white;
     border-radius: 12px;
@@ -248,7 +251,7 @@
 
     @media (max-width: 480px) {
       font-size: 14px;
-      width: 210px;
+      width: 220px;
     }
   `;
 
@@ -256,10 +259,11 @@
     width: 50%; /* Set width to 50% or any value that fits your design */
     background: hsla(271, 100%, 50%, 1);
     padding: 10px 6px;
-    margin-top: 10px;
+    margin-top: 100px;
     border-radius: 12px;
     border: none;
     color: white;
+    // margin-top: 100px !impotent; 
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
