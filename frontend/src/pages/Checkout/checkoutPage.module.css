@@ -122,7 +122,7 @@ input:focus {
   background: #064380;
   padding: 1rem;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  /* transition: background 0.3s ease; */
 }
 
 .orderItem:hover {
