@@ -1,122 +1,162 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  margin: 1.5rem;
-  margin-top: 0.5rem;
+/* 🔹 General Layout */
+.cartContainer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  background: #1e2a42;
+  color: #2ee23d;
+  /* border-radius: 1rem; */
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
 }
 
-.list {
+/* 🔹 Cart Content */
+.cartContent {
   display: flex;
   flex-direction: column;
-  flex: 3 0;
-  justify-content: space-evenly;
-  border: 1px solid #ffbbbb;
-  border-radius: 1rem;
-  list-style-type: none;
-  margin: 0.5rem;
+  gap: 1.5rem;
+}
+
+/* 🔹 Cart List */
+.cartList {
+  list-style: none;
   padding: 0;
 }
 
-.list li {
+.cartItem {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #e4e4e4;
+  background: #122853;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
 }
 
-.list li:last-child {
-  border: none;
+.cartItem:hover {
+  transform: translateY(-3px);
 }
 
-.list li img {
+/* 🔹 Item Image */
+.cartItem img {
   width: 5rem;
   height: 5rem;
-  border-radius: 100rem;
+  border-radius: 50%;
   object-fit: cover;
+  margin-right: 1rem;
 }
 
-.list li div {
-  padding: 1rem;
-}
-
-.list li div:not(:first-child) {
-  flex-basis: 18%;
-}
-
-.list li select {
-  width: 3rem;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid lightgrey;
-  font-size: 1.1rem;
-  font-weight: 100;
-}
-
-.list .remove_button {
-  border-radius: 1rem;
-  border: none;
-  padding: 0.5rem;
-  color: #e72929;
-  opacity: 0.7;
-  outline: none;
-}
-
-.list .remove_button:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.checkout {
+/* 🔹 Item Details */
+.itemDetails {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.itemName {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.itemActions {
+  display: flex;
+  gap: 1rem;
   align-items: center;
-  flex: 1 3;
-  height: 20rem;
-  border: 1px solid #ffbbbb;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  margin: 0.5rem;
 }
 
-.checkout > div {
-  font-size: 1.4rem;
-  margin: 1rem;
-  flex: 3;
+/* 🔹 Dropdown */
+.itemActions select {
+  background: #10192b;
+  border: 1px solid #6d6d6d;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* 🔹 Remove Button */
+.removeButton {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #e63946;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.removeButton:hover {
+  color: #ff4b4b;
+}
+
+/* 🔹 Checkout Box */
+.checkoutBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  background: #142852;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
 }
 
-.checkout .foods_count {
-  margin-bottom: 1.5rem;
-}
-
-.checkout .foods_count::before {
-  content: 'Count: ';
-  color: grey;
-}
-
-.checkout .total_price::before {
-  content: 'Price: ';
-  color: grey;
-}
-
-.checkout a {
-  padding: 1rem;
-  color: white;
-  background: #e72929;
-  display: block;
-  width: 99%;
-  border-radius: 1rem;
+.checkoutDetails {
+  font-size: 1.3rem;
   text-align: center;
-  justify-self: center;
+  margin-bottom: 1rem;
 }
 
-.checkout a:hover {
+.checkoutDetails span {
+  font-weight: bold;
+  color: #fdfbf6;
+}
+
+/* 🔹 Checkout Button */
+.checkoutButton {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(to right, #ff4b2b, #f9a826);
+  color: white;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.checkoutButton:hover {
+  transform: scale(1.05);
   opacity: 0.8;
-  cursor: pointer;
+}
+
+/* 🔹 Responsive Styles */
+@media (max-width: 768px) {
+  .cartContainer {
+    padding: 1.5rem;
+  }
+
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .cartItem img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .itemActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .checkoutBox {
+    padding: 1rem;
+  }
+
+  .checkoutButton {
+    width: 100%;
+    text-align: center;
+  }
 }

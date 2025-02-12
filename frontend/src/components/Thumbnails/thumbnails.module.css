@@ -165,3 +165,42 @@
     gap: 0.5rem;
   }
 }
+
+/* 🔹 Responsive Design for Food Items */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .image {
+    height: 10rem; /* Adjusted for smaller screens */
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .expiry, .tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .product_item_footer {
+    font-size: 0.9rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+

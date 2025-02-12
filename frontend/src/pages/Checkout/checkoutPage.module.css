@@ -1,32 +1,186 @@
-.container {
-  margin-top: 1rem;
+/* 🌟 Checkout Page - Modern, Clean, Fully Responsive */
+.wrapper {
   display: flex;
-  margin: 0 0 6rem 2rem;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f2f5, #686c70);
+  padding: 2rem 1rem;
 }
 
-.content {
-  width: 35rem;
-  margin: 0 3rem 0 0;
+/* 🛒 Checkout Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  background: #0d6dad;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 3rem;
+  gap: 2rem;
+  transition: 0.3s ease-in-out;
+  width: 90%;
 }
 
-.content,
+/* 🏷️ Card Section for Form & Map */
+.card {
+  flex: 1;
+  min-width: 350px;
+  background: #fffcfc;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* 📝 Input Fields */
 .inputs {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 }
 
-.inputs {
+input {
   width: 100%;
+  padding: 1rem;
+  border: 2px solid #7c7474;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.buttons_container {
-  flex-basis: 100%;
+input:focus {
+  border-color: #ff5252;
+  outline: none;
+}
+
+/* 📍 Map Container */
+.mapContainer {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 🎯 Button Container */
+.buttonContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
-.buttons {
-  margin: 2rem;
-  width: 35rem;
+
+/* 🔘 Payment Button */
+.paymentButton {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(135deg, #646262, #ff1744);
+  color: rgb(16, 18, 153);
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.paymentButton:hover {
+  background: linear-gradient(135deg, #d50000, #b71c1c);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+/* 🎨 Titles */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* 🎨 Order Items List */
+.orderItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #064380;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.orderItem:hover {
+  background: #e3eaf0;
+}
+
+/* 📱 Mobile & Tablet Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    padding: 2rem;
+    width: 95%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .mapContainer {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .paymentButton {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .mapContainer {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .paymentButton {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .mapContainer {
+    height: 250px;
+  }
 }

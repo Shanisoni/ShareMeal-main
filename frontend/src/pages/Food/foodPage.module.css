@@ -1,100 +1,215 @@
+/* 🔹 Professional Container */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 3rem;
+  gap: 2rem;
+  padding: 3rem;
+  background: linear-gradient(to right, #030614, #052141);
+  /* border-radius: 10.5rem; */
 }
 
+/* 🔹 Responsive Layout */
 .container > * {
-  min-width: 25rem;
-  max-width: 40rem;
+  min-width: 22rem;
+  max-width: 38rem;
 }
 
+/* 🔹 Image Styling */
 .image {
-  border-radius: 3rem;
+  border-radius: 1.5rem;
   flex: 1 0;
   object-fit: cover;
-  height: 35rem;
-  margin: 1rem;
+  width: 100%;
+  height: auto;
+  max-height: 28rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 1rem 0;
 }
 
+.image:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Modern Details Section */
 .details {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1 0;
-  border-radius: 3rem;
   padding: 2rem;
-  color: black;
-  margin-left: 1rem;
+  background: rgba(26, 55, 133, 0.8);
+  border-radius: 1.5rem;
+  color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(51, 50, 50, 0.3);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
 }
 
+.details:hover {
+  transform: translateY(-4px);
+}
+
+/* 🔹 Header - Name & Favorite */
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .name {
   font-size: 2rem;
   font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
+.details:hover .name {
+  color: #f9a826;
+}
+
+/* 🔹 Favorite Icon */
 .favorite {
-  color: #e72929;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .favorite.not {
-  color: grey;
+  color: #6d6d6d;
 }
 
+.favorite:hover {
+  transform: scale(1.1);
+  color: #5c5609;
+}
+
+/* 🔹 Tags & Details */
 .origins {
   display: flex;
   flex-wrap: wrap;
   margin: 0.7rem 0;
+  gap: 0.5rem;
 }
 
 .origins > span {
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  margin: 0.5rem 0.5rem 0 0;
-  border-radius: 2rem;
-  background-color: aliceblue;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background: rgba(240, 236, 236, 0.1);
+  color: #e0e0e0;
 }
 
+.origins > span:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Cooking Time */
 .cook_time {
   margin-top: 1rem;
 }
 
 .cook_time span {
-  padding: 0.6rem 2rem 0.6rem 0;
-  border-radius: 10rem;
-  font-size: 1.3rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  background: rgba(5, 110, 70, 0.658);
+  color: #e0e0e0;
 }
 
+.cook_time span:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Price Section */
 .price {
-  font-size: 1.8rem;
-  margin: 2rem 2rem 2rem 0;
-  color: green;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  color: #eff1f8;
+  transition: color 0.3s ease;
+}
+
+.details:hover .price {
+  color: #ffcc00;
 }
 
 .price::before {
   content: 'Price: ';
-  color: darkgrey;
+  color: #bbb;
+  font-weight: normal;
 }
 
+/* 🔹 Call-to-Action Button */
 .container button {
   color: white;
-  background-color: #e72929;
+  background: linear-gradient(to right, #812121, #ff4b2b);
   border: none;
   font-size: 1.2rem;
-  padding: 1rem;
-  border-radius: 10rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
   outline: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 40% !important;
+  max-width: 28rem
+  !important;
+  align-self: center;
+  text-align: center;
+  white-space: nowrap; 
 }
 
 .container button:hover {
-  opacity: 0.9;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
   cursor: pointer;
+}
+
+/* 🔹 Full Mobile Optimization */
+@media (max-width: 768px) {
+  /* Stack everything for better readability */
+  .container {
+    flex-direction: column;
+    padding: 1.5rem;
+    align-items: center;
+  }
+
+  /* Make the image scale properly */
+  .image {
+    height: auto;
+    max-height: 20rem;
+  }
+
+  /* Adjust details section */
+  .details {
+    padding: 1.2rem;
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  /* Reduce text size for better readability */
+  .name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .price {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* Center origins (tags) */
+  .origins {
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  /* Make the button more prominent */
+  .container button {
+    width: auto; /* Adjusts width dynamically */
+    padding: 0.9rem 1.5rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    width: 50% !important;
+    /* padding-right: 2rem !important; */
+  }
 }
