@@ -45,9 +45,8 @@ export default function ProfilePage() {
             })}
             error={errors.address}
           />
-
           {/* Updated smaller button */}
-          <Button type="submit" text="Update" backgroundColor="#009e84" />
+          <Button type="submit" text="Update" backgroundColor="#009e84" className = "bttn" />
         </form>
 <br/>
         <ChangePassword />

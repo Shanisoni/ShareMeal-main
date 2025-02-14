@@ -8,22 +8,24 @@
 
 /* Button to Open Dropdown */
 .userButton {
-  padding: 10px 15px;
-  background-color: #09a39c;
-  color: white;
-  font-size: 22px;
+  padding: 10px 12px; /* Adjust padding for better spacing */
+  background-color: #067771;
+  color: rgb(255, 255, 255);
+  font-size: 21px; /* Slightly reduce font size for balance */
   font-weight: 500;
   text-decoration: none;
   border: none;
-  border-radius: 10px;
-  box-shadow: 1px 1px 0px rgba(194, 192, 192, 0.671);
-  border-radius: 8px;
+  margin-right: -3px;
+  margin-top: 1px !important;
+  border-radius: 8px; /* Ensure border-radius is properly applied */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px; /* Reduce gap to balance text & icon */
+  min-width: 120px; /* Set minimum width to prevent misalignment */
+  justify-content: center; /* Ensures text stays centered */
 }
+
 
 .userButton:hover {
   background-color: #ffcc00;

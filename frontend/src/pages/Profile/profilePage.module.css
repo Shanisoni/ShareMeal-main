@@ -101,6 +101,12 @@ button {
   margin: 0 auto;
 }
 
+/* .bttn{
+
+  width: 45% !important;
+
+} */
+
 button:hover {
   background: linear-gradient(135deg, #ff9900, #ffaa33);
   transform: scale(1.05);

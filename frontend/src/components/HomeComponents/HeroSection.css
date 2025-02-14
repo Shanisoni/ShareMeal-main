@@ -40,9 +40,9 @@ h1, h2, h3 {
     color: var(--primary-color);
     font-family: 'Helvetica Neue', Arial, sans-serif; /* body-font */
     width: 100vw;
-    /* height: 45vw; */
+    /* height: 10vw; */
     margin-right: 0;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     margin-bottom: 100px;
   }
 
@@ -63,7 +63,7 @@ h1, h2, h3 {
   .container {
     /* border: 3px solid blue; */
     color: var(--primary-color);;
-    /* width: 100%; */
+    width: 94%;
     /* margin: 0 auto; */
     /* padding: 24px 5%; */
     display: flex;
@@ -312,6 +312,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin-top: 90px !important; */
   }
   
   .hero-image {

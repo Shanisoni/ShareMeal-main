@@ -9,6 +9,7 @@
   justify-content: space-between;
   width: 100%;
   position: relative;
+  margin-bottom: -20px;
 }
 
 .container {
@@ -185,3 +186,21 @@
     display: block; /* Show hamburger on mobile */
   }
 }
+
+/* Username Styling (Visible only on large screens) */
+.username {
+  color: white;
+  font-size: 24px;
+  letter-spacing: 1px;
+  /* font-weight: bold; */
+  /* margin-left: 20px; */
+  display: block;
+}
+
+/* Hide username on small screens */
+@media (max-width: 768px) {
+  .username {
+    display: none;
+  }
+}
+
