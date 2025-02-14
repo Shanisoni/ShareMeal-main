@@ -1,0 +1,35 @@
+/* Default Styles */
+.title {
+    font-size: 27px;
+    font-family: Arial, sans-serif;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevents text wrapping */
+    color: rgba(17, 91, 228, 0.94);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Tablet View */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 22px;
+      padding: 8px 15px;
+      text-align: center;
+      white-space: nowrap !important; 
+    }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 18px;
+      padding: 6px 12px;
+      white-space: nowrap !important; 
+    }
+  }
+  

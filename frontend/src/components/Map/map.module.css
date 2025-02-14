@@ -1,6 +1,7 @@
 .container {
   position: relative;
-  width: 35rem;
+  width: 100%;
+  max-width: 35rem;
   height: 22rem;
   text-align: center;
 }
@@ -8,25 +9,62 @@
 .map {
   width: 100% !important;
   height: 100% !important;
+  border-radius: 10px;
+  margin-left: 190px;
 }
 
+/* 🛠️ Button Styling */
 .find_location {
   position: absolute;
-  margin: auto;
-  width: 12rem;
+  left: 50%;
+  /* transform: translateX(0%); */
+  width: 10rem;
   min-height: 2.5rem;
   font-size: 1rem;
   top: 0;
-  left: 0;
-  right: 0;
+  margin-left: -100px;
   z-index: 1000;
-  background-color: white;
+  background-color: rgb(19, 82, 201);
   cursor: pointer;
   border-radius: 0 0 1rem 1rem;
   border: none;
   border-top: 1px solid lightgrey;
+  /* transition: background-color 10.3s ease; Keeps a smooth effect when changing color dynamically */
 }
 
-.find_location:hover {
-  background-color: whitesmoke;
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    height: 18rem;
+  }
+
+  .map {
+    height: 16rem;
+    margin-left: 0; /* Remove unnecessary left margin */
+  }
+
+  .find_location {
+    width: 80%;
+    font-size: 0.9rem;
+    min-height: 2rem;
+    margin-left: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 15rem;
+  }
+
+  .map {
+    height: 14rem;
+  }
+
+  .find_location {
+    width: 90%;
+    font-size: 0.85rem;
+    min-height: 1.8rem;
+    margin-left: -50px;
+  }
 }

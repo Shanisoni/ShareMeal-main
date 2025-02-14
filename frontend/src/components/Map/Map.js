@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import classes from './map.module.css';
-import 'leaflet/dist/leaflet.css';
+import React, { useState, useEffect } from "react";
+import classes from "./map.module.css";
+import "leaflet/dist/leaflet.css";
 import {
   MapContainer,
   TileLayer,
   Marker,
   Popup,
   useMapEvents,
-} from 'react-leaflet';
-import { toast } from 'react-toastify';
-import * as L from 'leaflet';
+} from "react-leaflet";
+import { toast } from "react-toastify";
+import * as L from "leaflet";
 
 export default function Map({ readonly, location, onChange }) {
   return (
@@ -39,7 +39,7 @@ export default function Map({ readonly, location, onChange }) {
 
 function FindButtonAndMarker({ readonly, location, onChange }) {
   const [position, setPosition] = useState(location);
-  
+
   const map = useMapEvents({
     click(e) {
       !readonly && setPosition(e.latlng);
@@ -52,20 +52,17 @@ function FindButtonAndMarker({ readonly, location, onChange }) {
       toast.error(e.message);
     },
   });
-  
+
   useEffect(() => {
     if (readonly) {
       map.setView(position, 13);
       return;
     }
     if (position) onChange(position);
-  }, [position, map, onChange, readonly]);  // Add map, onChange, readonly to the dependency array
-  
-
-  
+  }, [position, map, onChange, readonly]);
 
   const markerIcon = new L.Icon({
-    iconUrl: '/marker-icon-2x.png',
+    iconUrl: "/marker-icon-2x.png",
     iconSize: [25, 41],
     iconAnchor: [12.5, 41],
     popupAnchor: [0, -41],
@@ -86,7 +83,7 @@ function FindButtonAndMarker({ readonly, location, onChange }) {
       {position && (
         <Marker
           eventHandlers={{
-            dragend: e => {
+            dragend: (e) => {
               setPosition(e.target.getLatLng());
             },
           }}

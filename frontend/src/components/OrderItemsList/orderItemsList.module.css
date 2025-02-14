@@ -1,26 +1,139 @@
-.table {
+/* 🌟 Main Container */
+.container {
   width: 100%;
-  border: 1px solid #460303;
-  margin-top: 1rem;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-.table td {
-  height: 3rem;
+/* 💻 Table Wrapper */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* 🏷️ Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+/* 🔹 Table Headers */
+.table th {
+  background-color: #f4f4f4;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* 📋 Table Cells */
+.table td {
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 🖼️ Image Styling */
 .table td img {
   width: 3rem;
   height: 3rem;
   object-fit: cover;
-  border-radius: 100rem;
+  border-radius: 50%;
 }
 
-.table h3 {
-  margin-top: 0.5rem;
-  margin-left: 0rem;
-  color: rgb(14, 106, 160);
+/* 🏁 Total Row */
+.totalRow td {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f4f4f4;
+  padding: 12px;
+  text-align: right;
 }
-.table a:hover {
-  opacity: 0.9;
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .tableWrapper {
+    overflow-x: auto; /* Enables horizontal scrolling */
+  }
+
+  .table th {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .table td img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .table h3 {
+    font-size: 18px;
+  }
+
+  .totalRow td {
+    font-size: 16px;
+    padding: 10px;
+    text-align: right;
+    /* margin-left: -90px !important; */
+  }
+}
+
+/* 📱 Mobile: Fully Responsive without vertical stacking */
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+
+  .tableWrapper {
+    max-width: 100%;
+    overflow-x: auto; /* Enables scrolling without extra right-side space */
+  }
+
+  .table {
+    width: 100%;
+    min-width: 400px; /* Prevents it from shrinking too much */
+  }
+
+  .table h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .table td {
+    font-size: 12px;
+    padding: 6px;
+    margin-left: 9px;
+  }
+
+  .table td img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* Ensure last row (Total) remains aligned */
+  .totalRow td {
+    font-weight: bold;
+    background-color: #bbb7bb;
+    padding: 10px;
+    text-align: right;
+    /* margin-right: 90px; */
+  }
+
+  .t td {
+    font-weight: bold;
+    background-color: #bbb7bb;
+    padding: 10px;
+    text-align: right;
+    /* margin-right: 90px; */
+  }
 }

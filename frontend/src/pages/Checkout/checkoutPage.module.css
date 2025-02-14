@@ -6,7 +6,7 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0f2f5, #686c70);
+  background: linear-gradient(135deg, #1c283a, #1467a7);
   padding: 2rem 1rem;
 }
 
@@ -24,11 +24,11 @@
   width: 90%;
 }
 
-/* 🏷️ Card Section for Form & Map */
+/* 🏣 Card Section for Form & Map */
 .card {
   flex: 1;
   min-width: 350px;
-  background: #fffcfc;
+  background: #ebecee;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -50,24 +50,24 @@
 input {
   width: 100%;
   padding: 1rem;
-  border: 2px solid #7c7474;
+  border: 2px solid #ddd9d9 !important;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
 input:focus {
-  border-color: #ff5252;
+  border-color: #302b2b;
   outline: none;
 }
 
 /* 📍 Map Container */
-.mapContainer {
-  width: 100%;
+/* .mapContainer {
+  width: 100% !important;
   height: 350px;
   border-radius: 12px;
   overflow: hidden;
-}
+} */
 
 /* 🎯 Button Container */
 .buttonContainer {
@@ -77,7 +77,7 @@ input:focus {
   margin-top: 2rem;
 }
 
-/* 🔘 Payment Button */
+/* 🔰 Payment Button */
 .paymentButton {
   width: 100%;
   max-width: 400px;
@@ -93,12 +93,12 @@ input:focus {
 }
 
 .paymentButton:hover {
-  background: linear-gradient(135deg, #d50000, #b71c1c);
+  background: linear-gradient(135deg, #d50000, #6e6c6c);
   cursor: pointer;
   transform: scale(1.05);
 }
 
-/* 🎨 Titles */
+/* 🌈 Titles */
 .title {
   font-size: 2rem;
   font-weight: bold;
@@ -107,48 +107,37 @@ input:focus {
   text-align: center;
 }
 
-/* 🎨 Order Items List */
-.orderItems {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
+/* 🌈 Order Items List */
 
 .orderItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #064380;
-  padding: 1rem;
+  padding: 1rem !important;
   border-radius: 8px;
-  /* transition: background 0.3s ease; */
 }
 
 .orderItem:hover {
   background: #e3eaf0;
 }
 
-/* 📱 Mobile & Tablet Responsive Styles */
-@media (max-width: 1024px) {
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: 2rem;
-    width: 95%;
+    padding: 1.5rem;
+    width: 100%;
   }
 
   .card {
     width: 100%;
-  }
-
-  .mapContainer {
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
     padding: 1.5rem;
+  }
+
+  .inputs input {
+    font-size: 0.9rem;
+    padding: 0.8rem;
   }
 
   .paymentButton {
@@ -172,15 +161,20 @@ input:focus {
   }
 
   .card {
-    padding: 1.2rem;
+    padding: 1rem;
+  }
+
+  .inputs input {
+    font-size: 0.85rem;
+    padding: 0.7rem;
   }
 
   .paymentButton {
-    padding: 0.9rem;
-    font-size: 0.9rem;
+    padding: 0.8rem;
+    font-size: 0.85rem;
   }
 
-  .mapContainer {
+  /* .mapContainer {
     height: 250px;
-  }
+  } */
 }

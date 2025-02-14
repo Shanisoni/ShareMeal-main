@@ -1,20 +1,34 @@
-import { FamilyRestroom } from '@mui/icons-material';
 import React from 'react';
 
 export default function Title({ title }) {
   const titleStyle = {
     fontSize: '27px',
-    // fontWeight: 'bolder',
+    fontFamily: 'Arial, sans-serif',
     marginTop: '14px',
-    FamilyRestroom: 'Arial, sans-serif',
     marginBottom: '10px',
-    // marginLeft: '-190px',
+    whiteSpace: 'nowrap', // Prevents text wrapping
     color: 'rgba(24, 81, 185, 0.94)',
     padding: '10px 20px',
-    // border: '3px solid rgba(13, 85, 240, 0.64)', // Simple border
     borderRadius: '8px',
     display: 'inline-block',
+    textAlign: 'center',
+    width: '100%',
+    maxWidth: '100%',
+
+    // Responsive styles
+    '@media (max-width: 768px)': {
+      fontSize: '22px',
+      padding: '8px 15px',
+    },
+
+    '@media (max-width: 480px)': {
+      fontSize: '18px',
+      padding: '6px 12px',
+    },
   };
 
   return <h1 style={titleStyle}>{title}</h1>;
 }
+
+
+
