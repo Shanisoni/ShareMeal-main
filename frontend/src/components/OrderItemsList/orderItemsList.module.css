@@ -6,7 +6,7 @@
   padding: 10px;
 }
 
-/* 💻 Table Wrapper */
+/* 💻 Table Wrapper */  
 .tableWrapper {
   width: 100%;
   overflow-x: auto;
@@ -104,13 +104,13 @@
     min-width: 400px; /* Prevents it from shrinking too much */
   }
 
-  .table h3 {
+  .table h1 {
     font-size: 16px;
     text-align: center;
   }
 
   .table td {
-    font-size: 12px;
+    font-size: 15px;
     padding: 6px;
     margin-left: 9px;
   }
@@ -137,3 +137,137 @@
     /* margin-right: 90px; */
   }
 }
+
+/* 🌟 Main Container */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* 💻 Table Wrapper */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🏷️ Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+/* 🔹 Table Headers */
+.table th {
+  background-color: #f4f4f4;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* 📋 Table Cells */
+.table td {
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* 🖼️ Image Styling */
+.table td img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* 🏁 Total Row */
+.totalRow td {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #f4f4f4;
+  padding: 12px;
+  text-align: right;
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .tableWrapper {
+    overflow-x: auto;
+  }
+
+  .table th,
+  .table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .table td img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .totalRow td {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* 📱 Mobile: Fully Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+
+  .tableWrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .table {
+    width: 100%;
+    min-width: 400px;
+  }
+
+  .table td {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .table td img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  /* 🎯 Order Items Styling for Mobile */
+  .orderItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .orderItems span {
+    background: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Make total row responsive */
+  .totalRow td {
+    font-weight: bold;
+    background-color: #bbb7bb;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
