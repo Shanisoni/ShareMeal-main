@@ -12,7 +12,7 @@ export default function OrderItemsList({ order }) {
       <tbody>
         <tr>
           <td colSpan="5">
-            <h3>Order Items:</h3>
+            <h3 className='op'>Order Items:</h3>
           </td>
         </tr>
         {order.items.map(item => (

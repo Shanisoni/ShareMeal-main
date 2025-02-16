@@ -133,7 +133,7 @@
 
   .t td {
     font-weight: bold;
-    background-color: #bbb7bb;
+    background-color: #f0eef0;
     padding: 10px;
     text-align: right;
     /* margin-right: 90px; */
@@ -157,11 +157,12 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 /* 🏷️ Table Styling */
 .table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
+  background-color: #d6dadd;
 }
 
 /* 🔹 Table Headers */
@@ -176,8 +177,9 @@
 .table td {
   padding: 12px;
   text-align: center;
+  border-radius: 10px;
   font-size: 16px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 3px solid #848686;
   word-break: break-word;
   white-space: normal;
 }
