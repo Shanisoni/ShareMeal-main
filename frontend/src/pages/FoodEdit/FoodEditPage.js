@@ -54,7 +54,7 @@ export default function FoodEditPage() {
     const imageUrl = await uploadImage(event);
     setImageUrl(imageUrl);
   };
-
+   
   return (
     <div className={classes.container}>
       <div className={classes.content}>
@@ -64,7 +64,7 @@ export default function FoodEditPage() {
           className={classes.form}
           onSubmit={handleSubmit(submit)}
           noValidate
-        >
+        >   
           <InputContainer label="Select Image">
             <div class="file-upload-container">
               <input type="file" onChange={upload} accept="image/jpeg" />

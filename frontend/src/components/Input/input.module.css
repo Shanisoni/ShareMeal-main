@@ -1,6 +1,6 @@
 .input {
   width: 100%;
-  color:rgb(87, 90, 87);
+  color:rgb(229, 233, 229);
   height: 80%;
   border:2px solid rgba(255, 255, 255, 0.235);  
   padding: 0 10px;
@@ -17,7 +17,7 @@
 }
 
 .input::placeholder {
-  color: #dfdfdf51;
+  color: #ddd9d9ec !important;
   font-size: 0.95rem;
 }
 

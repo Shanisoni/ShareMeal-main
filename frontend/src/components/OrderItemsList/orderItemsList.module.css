@@ -3,7 +3,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 100px;
+  margin-top: 90px !important;
 }
 
 /* 💻 Table Wrapper */  
@@ -92,6 +93,7 @@
 @media (max-width: 480px) {
   .container {
     padding: 0;
+    margin-top: 90px;
   }
 
   .tableWrapper {
@@ -224,6 +226,8 @@
 @media (max-width: 480px) {
   .container {
     padding: 0;
+    /* height: 90px !important; */
+    /* width: 90px !important; */
   }
 
   .tableWrapper {
@@ -233,7 +237,7 @@
 
   .table {
     width: 100%;
-    min-width: 400px;
+    min-width: 0px;
   }
 
   .table td {
@@ -269,5 +273,8 @@
     padding: 10px;
     text-align: center;
   }
+  /* .td h3{
+    margin-top: 90px !important;
+  } */
 }
 

@@ -20,7 +20,7 @@
   padding: 1.5rem;
   border: 2px dashed white;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(204, 202, 202, 0.15);
   transition: all 0.3s ease-in-out;
   position: relative;
   text-align: center;
@@ -60,7 +60,7 @@ input[type="file"] {
   /* height: 10% !important; */
   display: block;
   padding: -20rem;
-  background: rgba(83, 84, 87, 0.1);
+  background: rgba(32, 33, 34, 0.1);
   border-radius: 8px;
 }
 
