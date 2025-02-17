@@ -17,6 +17,8 @@ export default function FoodPage() {
     navigate('/cart');
   };
 
+
+  
   useEffect(() => {
     getById(id).then(setFood);
   }, [id]);
