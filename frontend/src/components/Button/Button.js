@@ -13,6 +13,9 @@ export default function Button({
   return (
     <div className={classes.container}>
       <button
+        className={classes.button}
+        type={type}
+        onClick={onClick}
         style={{
           color,
           backgroundColor,
@@ -20,8 +23,6 @@ export default function Button({
           width,
           height,
         }}
-        type={type}
-        onClick={onClick}
       >
         {text}
       </button>
@@ -31,10 +32,10 @@ export default function Button({
 
 Button.defaultProps = {
   type: 'button',
-  text: 'Submit',
-  backgroundColor: '#e72929',
+  text: 'Proceed to Payment',
+  backgroundColor: '#ff7b00',
   color: 'white',
-  fontSize: '1.3rem',
-  width: '12rem',
-  height: '3.5rem',
+  fontSize: '1.2rem',
+  width: '240px',
+  height: '55px',
 };

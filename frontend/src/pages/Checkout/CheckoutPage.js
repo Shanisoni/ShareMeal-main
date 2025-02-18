@@ -12,7 +12,7 @@ import Button from '../../components/Button/Button';
 import OrderItemsList from '../../components/OrderItemsList/OrderItemsList';
 import Map from '../../components/Map/Map';
 
-export default function CheckoutPage() {
+export default function CheckoutPage() {  
   const { cart } = useCart();
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ export default function CheckoutPage() {
     <div className={classes.wrapper}>
       <form onSubmit={handleSubmit(submit)} className={classes.container}>
         <div className={classes.card}>
-          <Title title="Checkout" fontSize="2rem" />
+        <Title title="Checkout" fontSize="2rem" className={classes.checkoutTitle} />
           <div className={classes.inputs}>
             <Input
               defaultValue={user.name}

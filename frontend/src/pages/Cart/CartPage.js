@@ -12,7 +12,7 @@ export default function CartPage() {
 
   return (
     <div className={classes.cartContainer}>
-      <Title title="Your Shopping Cart" />
+      <Title title="Shopping Cart" />
 
       {cart.items.length === 0 ? (
         <NotFound message="Your cart is empty! Add some items." />

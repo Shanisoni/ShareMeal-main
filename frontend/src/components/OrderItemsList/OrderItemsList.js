@@ -12,7 +12,8 @@ export default function OrderItemsList({ order }) {
       <tbody>
         <tr>
           <td colSpan="5">
-            <h3 className='op'>Order Items:</h3>
+          <h3 className={classes.op}>Order Items:</h3>
+    
           </td>
         </tr>
         {order.items.map(item => (
@@ -36,7 +37,7 @@ export default function OrderItemsList({ order }) {
         <tr>
           <td colSpan="3"></td>
           <td>
-            <strong>Total :</strong>
+            <strong className='op'>Total :</strong>
           </td>
           <td>
             <Price price={order.totalPrice} />

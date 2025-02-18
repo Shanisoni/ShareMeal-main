@@ -50,7 +50,7 @@
 input {
   width: 100%;
   padding: 1rem;
-  border: 2px solid #ddd9d9 !important;
+  border: 2px solid #dfdbdb !important;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
@@ -59,43 +59,6 @@ input {
 input:focus {
   border-color: #302b2b;
   outline: none;
-}
-
-/* 📍 Map Container */
-/* .mapContainer {
-  width: 100% !important;
-  height: 350px;
-  border-radius: 12px;
-  overflow: hidden;
-} */
-
-/* 🎯 Button Container */
-.buttonContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-/* 🔰 Payment Button */
-.paymentButton {
-  width: 100%;
-  max-width: 400px;
-  background: linear-gradient(135deg, #646262, #ff1744);
-  color: rgb(16, 18, 153);
-  padding: 1.2rem;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
-  transition: 0.3s ease-in-out;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.paymentButton:hover {
-  background: linear-gradient(135deg, #d50000, #6e6c6c);
-  cursor: pointer;
-  transform: scale(1.05);
 }
 
 /* 🌈 Titles */
@@ -121,6 +84,8 @@ input:focus {
 .orderItem:hover {
   background: #e3eaf0;
 }
+
+
 
 /* 📱 Mobile Responsive Styles */
 @media (max-width: 768px) {
@@ -178,3 +143,5 @@ input:focus {
     height: 250px;
   } */
 }
+
+
