@@ -337,12 +337,12 @@ h1, h2, h3 {
   transition: .6s;
   cursor: pointer;
   }
-.hero-image:hover{
+/* .hero-image:hover{
  
 
   clip-path: inset(0 0 0 var(--_f) round var(--r));
   --_t: translateX(calc(-1*var(--_f))) rotateY(calc(-1*var(--_a)))
-}
+} */
 
   
   

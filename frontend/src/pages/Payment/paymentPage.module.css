@@ -1,37 +1,93 @@
+/* Main container styling */
 .container {
   display: flex;
-  margin: 0 2rem 6rem 2rem;
+  margin: 0 2rem 6rem;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
 }
 
+/* Content styling */
 .content {
-  width: 35rem;
-  margin: 0 3rem 0 0;
+  width: 100%;
+  max-width: 35rem;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 }
 
+/* Summary section styling */
 .summary > div {
   display: flex;
+  align-items: center;
   margin-top: 0.7rem;
 }
 
 .summary span {
   font-size: 1.2rem;
+  flex: 1;
 }
+
 .summary h3 {
   margin: 0 1rem 0 0;
   flex-basis: 5rem;
 }
 
+/* Buttons container styling */
 .buttons_container {
-  flex-basis: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem 0;
 }
 
 .buttons {
-  margin: 2rem;
-  width: 35rem;
+  margin: 1rem;
+  width: 100%;
+  max-width: 35rem;
+  text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin: 0 1rem 4rem;
+  }
+
+  .content {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .buttons {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .summary h3 {
+    flex-basis: 4rem;
+  }
+
+  .summary span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0 1rem 3rem;
+    padding: 0.5rem;
+  }
+
+  .summary span {
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    margin: 0.5rem 0;
+  }
 }

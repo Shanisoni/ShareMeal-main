@@ -22,7 +22,7 @@ const TitleWrapper = styled(motion.h1)`
   font-size: 32px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
-  color: rgba(11, 65, 172, 0.94);
+  color: rgba(207, 208, 211, 0.94);
   text-align: center;
   padding: 10px 20px;
   border-radius: 18px;

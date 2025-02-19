@@ -32,7 +32,7 @@ const HeroSection = () => {
           <img
             className="hero-image"
             alt="hero"
-            src="/images/heroImage.jpg"
+            src="https://res.cloudinary.com/dl7e8qndf/image/upload/v1739971834/Charity-cuate_lkklps.png"
           />
         </div>
       </div>
