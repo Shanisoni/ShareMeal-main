@@ -11,11 +11,12 @@
   outline: none;
   font-weight: bold;
   font-size: 1.2rem;
-  border-radius: 50px; /* Fully rounded button */
+  border-radius: 50px;
   width: 240px;
   height: 55px;
-  background: linear-gradient(135deg, #ff7b00, #ff3d00); /* Premium gradient */
+  background: linear-gradient(135deg, #ff7b00, #ff3d00);
   color: white;
+  text-transform: none !important;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
@@ -23,9 +24,10 @@
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(255, 61, 0, 0.4); /* Subtle glow effect */
+  box-shadow: 0 5px 15px rgba(255, 61, 0, 0.4);
 }
 
+/* Ripple Hover Effect */
 .button::before {
   content: "";
   position: absolute;
@@ -44,12 +46,32 @@
 
 .button:hover {
   cursor: pointer;
-  background: linear-gradient(135deg, #ff3d00, #ff7b00); /* Inverse gradient effect */
-  box-shadow: 0 8px 20px rgba(255, 61, 0, 0.6); /* Stronger glow on hover */
+  background: linear-gradient(135deg, #ff3d00, #ff7b00);
+  box-shadow: 0 8px 20px rgba(255, 61, 0, 0.6);
   transform: translateY(-3px);
 }
 
 .button:active {
   transform: scale(0.95);
   box-shadow: 0 3px 8px rgba(255, 61, 0, 0.4);
+}
+
+/* 🌍 Mobile Responsiveness */
+@media (max-width: 768px) {
+  .button {
+    width: 80%; /* Adjust width to be responsive */
+    max-width: 280px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 100% !important; /* Wider for small screens */
+    max-width: 260px;
+    height: 48px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
 }
