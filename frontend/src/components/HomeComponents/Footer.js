@@ -10,7 +10,7 @@ const Footer = () => {
           <span className="logo-text">ShareMeal</span>
         </a>
         <p className="copyright">© 2024 ShareMeal —
-          <a href="https://www.linkedin.com/in/tripathiabhishek07/" className="twitter-link" rel="noopener noreferrer" target="_blank"> shanisoni7084@gmail.com</a>
+          <a href="https://www.linkedin.com/in/shanisoni/" className="twitter-link" rel="noopener noreferrer" target="_blank"> shanisoni7084@gmail.com</a>
         </p>
         <span className="social-links">
           {/* <a className="social-link" href="/">
