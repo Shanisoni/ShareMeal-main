@@ -21,6 +21,8 @@ import UserEditPage from './pages/UserEdit/UserEditPage';
 import FeatureSection from './components/HomeComponents/FeatureSection';
 import ContactPage from './pages/Contact/contact';  // Import Contact Page
 
+
+
 export default function AppRoutes() {
   return (
     <Routes>
