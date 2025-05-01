@@ -3,6 +3,11 @@ import { useAuth } from '../../hooks/useAuth';
 // import NotFound from '../NotFound/NotFound';
 import AuthRoute from '../AuthRoute/AuthRoute';
 
+
+
+
+
+
 function AdminRoute({ children }) {
   const { user } = useAuth();
   return user.isAdmin ? (
@@ -11,6 +16,8 @@ function AdminRoute({ children }) {
     children
   );
 }
+
+
 
 
 
