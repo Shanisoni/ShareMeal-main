@@ -11,6 +11,9 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   };
 
+
+
+
   return (
     <header className={classes.header}>
       <div className={classes.container}>
@@ -18,6 +21,8 @@ export default function Header() {
           <img src="/images/logo.png" alt="Logo" />
           ShareMeal
         </Link>
+
+
 
         <nav className={classes.nav}>
           <ul>
@@ -32,16 +37,22 @@ export default function Header() {
           <span className={classes.username}>{user.name}</span> // Username appears only on large screens
         )}
 
+
+
         {!user && (
           <li className={classes.loginButton}>
             <Link to="/login">Login</Link>
           </li>
         )}
 
+
+
         <div className={classes.hamburger} onClick={toggleMenu}>
           {menuOpen ? <span className={classes.close}>&#x2715;</span> : <span className={classes.burger}>&#9776;</span>}
         </div>
       </div>
+
+
 
       {/* Mobile Menu */}
       <div className={`${classes.mobileMenu} ${menuOpen ? classes.open : ""}`}>
@@ -54,6 +65,8 @@ export default function Header() {
               <Link to="/login" onClick={toggleMenu}>Login</Link>
             </li>
           )}
+
+
           {/* Logout button in mobile menu */}
           {user && (
             <li className={classes.mobileLogout} onClick={logout}>
