@@ -10,10 +10,7 @@ export default function Header() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
-
-
-
+  
   return (
     <header className={classes.header}>
       <div className={classes.container}>
