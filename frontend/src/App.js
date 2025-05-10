@@ -6,11 +6,13 @@ import Loading from './components/Loading/Loading';
 
 import { useLoading } from './hooks/useLoading';
 
+
 // import { setErrorInterceptor } from './interceptors/errorInterceptor';
 // import { setLoadingInterceptor } from './interceptors/loadingInterceptor';
 import { useEffect } from 'react';
 import './App.css';
 // import Contact from './components/contact';
+
 
 function App() {
   const { showLoading, hideLoading } = useLoading();
@@ -30,5 +32,6 @@ function App() {
    </div>
   );
 }
+
 
 export default App;
