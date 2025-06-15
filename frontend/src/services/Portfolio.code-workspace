@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../A/Portfolio"
+		},
+		{
+			"path": "../../../../../A/BackEnd Development"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../News-App React"
+		},
+		{
+			"path": "../../../../../A/VS Code/DSA By Code Help"
+		},
+		{
+			"path": "C:/Users/ASUS/Downloads/Gmail-clone"
+		},
+		{
+			"path": "../../../../../A/real-time-chat-app-main"
+		},
+		{
+			"path": "../../../../SnapPaste"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DSA By Code Help"
+	}
+}
